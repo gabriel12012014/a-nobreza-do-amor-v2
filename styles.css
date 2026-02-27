@@ -102,8 +102,7 @@ html {
 body {
     font-family: "Globotipo", sans-serif;
     color: var(--dark-1);
-    background: url('assets/banner/ANDA_LOGO_BG.webp') center/cover fixed;
-    background-color: var(--beige-1);
+    background-color: transparent;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -298,11 +297,9 @@ p {
 }
 
 .glass-light {
-    background: rgba(254, 230, 199, 0.7);
-    backdrop-filter: blur(12px);
+    background: transparent;
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* Hero Section */
@@ -501,9 +498,9 @@ p {
 
 .flip-card {
     background-color: transparent;
-    height: 480px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     perspective: 1000px;
-    cursor: pointer;
 }
 
 .flip-card-inner {
@@ -534,28 +531,23 @@ p {
 }
 
 .flip-card-front {
-    background-color: white;
+    background-color: transparent;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
     display: block;
     /* Removing flex centering to allow absolute positioning of children */
 }
 
 .flip-card-back {
-    padding: 2rem;
+    padding: 3rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    background-color: transparent;
 }
 
-.flip-card-front.bg-teal {
-    border-bottom: 5px solid var(--teal-2);
-}
-
-.flip-card-front.bg-gold {
-    border-bottom: 5px solid var(--gold-2);
-}
+/* Removed empty rulesets */
 
 .card-img-placeholder {
     width: 100%;
@@ -570,17 +562,19 @@ p {
     z-index: 0;
 }
 
+
+
 .card-name-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 3rem 1rem;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 }
 
 .flip-card-front strong {
@@ -592,13 +586,13 @@ p {
     font-weight: 700;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), 0px 0px 2px rgba(0, 0, 0, 0.8);
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .flip-card-front span {
     display: block;
     margin-top: 0.2rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: var(--gold-3);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), 0px 0px 2px rgba(0, 0, 0, 0.8);
     position: relative;
@@ -861,5 +855,130 @@ p {
     .nav-links {
         display: none;
         /* simple mobile fallback */
+    }
+}
+
+/* WebGL Background */
+#silk-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Restore WebGL background visibility */
+.section {
+    background-color: transparent !important;
+}
+
+.split-pane .pane-content {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    color: white;
+}
+
+.bg-beige {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.bg-dark {
+    background-color: transparent !important;
+}
+
+
+/* Card Frames */
+.card-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.card-frame-front {
+    background-image: url('assets/moldura-foto-1x1.webp');
+}
+
+.card-frame-back {
+    background-image: url('assets/moldura-foto-1x1-verso.webp');
+}
+
+.flip-card-back> :not(.card-frame) {
+    position: relative;
+    z-index: 20;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+
+    /* Countdown */
+    .countdown-container {
+        gap: 0.5rem;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+        padding: 0.5rem;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+
+    /* Hero Subtitle */
+    .hero .subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    /* Center the banner image instead of making it huge */
+    .main-logo {
+        max-width: 90% !important;
+    }
+
+    /* Container global width adjustments for mobile */
+    .container {
+        padding: 0 5%;
+        width: 100%;
+    }
+
+    /* Synopsis Section (glass-light padding) e Casal padding */
+    .glass-light {
+        padding: 1.5rem 1rem;
+        width: 100%;
+    }
+
+    .padding-lg {
+        padding: 1.5rem 0rem;
+        /* Match the width of glass-light inside the 90% container */
+    }
+
+    /* Footer / Credits */
+    footer p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .heading-lg {
+        font-size: 2.2rem;
+    }
+
+    .heading-md {
+        font-size: 1.8rem;
     }
 }
