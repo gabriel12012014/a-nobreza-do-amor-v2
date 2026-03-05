@@ -4,60 +4,70 @@
     font-family: "Globotipo";
     font-weight: 100;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-th-lt.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 200;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-th.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 300;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-lt-lt.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 400;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-lt.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 500;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-rg-lt.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 600;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-rg.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 700;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-bd-lt.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 800;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-bd.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 900;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-bk-lt.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Globotipo";
     font-weight: 950;
     src: url("https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/fonts/globo-bk.woff2") format("woff2");
+    font-display: swap;
 }
 
 :root {
@@ -102,7 +112,11 @@ html {
 body {
     font-family: "Globotipo", sans-serif;
     color: var(--dark-1);
-    background-color: transparent;
+    background-color: #000;
+    background-image: url('assets/banner/ANDA_LOGO_BG.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -124,10 +138,12 @@ p {
     font-weight: 400;
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .heading-xl {
     font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .heading-lg {
@@ -187,6 +203,10 @@ p {
 
 .text-center {
     text-align: center;
+}
+
+.text-center.section-header {
+    margin-bottom: 1rem;
 }
 
 /* Utilities */
@@ -298,7 +318,6 @@ p {
 
 .glass-light {
     background: transparent;
-    padding: 2.5rem;
     border-radius: 20px;
 }
 
@@ -311,14 +330,29 @@ p {
     text-align: center;
     position: relative;
     /* We will set the background dynamically or via class */
-    background-color: var(--teal-1);
-    /* Fallback */
+    background-color: #000;
+    background-image: url('assets/banner/load-banner.webp');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(8, 8, 8, 0.2) 0%, rgba(30, 28, 29, 0.9) 100%);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+    transition: opacity 1.5s ease;
 }
 
 .hero-content {
@@ -398,9 +432,7 @@ p {
 }
 
 .countdown-item {
-    background: rgba(30, 28, 29, 0.7);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
+    background: transparent;
     padding: 1rem;
     min-width: 80px;
 }
@@ -427,6 +459,7 @@ p {
 .section {
     padding: 6rem 0;
     position: relative;
+    width: 100%;
 }
 
 /* Split Section (Batanga & Barro Preto) */
@@ -453,10 +486,12 @@ p {
 }
 
 #img-batanga {
+    background-image: url('assets/batanga.webp');
     background-color: var(--teal-2);
 }
 
 #img-barropreto {
+    background-image: url('assets/barro-preto.webp');
     background-color: var(--gold-2);
 }
 
@@ -466,25 +501,44 @@ p {
     flex-direction: column;
     justify-content: center;
     padding: 4rem;
-    background-color: white;
+    color: white;
 }
 
-.split-pane:nth-child(even) .pane-content {
-    background-color: var(--beige-3);
+.bg-batanga {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/bg-nucleo-a.webp') repeat;
+}
+
+.bg-barropreto {
+    background: url('assets/bg-nucleo-b.webp') repeat;
 }
 
 /* Casal */
 #img-casal {
     background: url('assets/casal.webp') center/cover no-repeat;
     background-color: var(--beige-2);
-    min-height: 600px;
-    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+    align-self: center;
+    aspect-ratio: 3/4;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+#casal p {
+    color: #fff;
 }
 
 /* Sections for Elenco */
 .nucleo-section {
     padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.nucleo-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .character-grid {
@@ -599,10 +653,6 @@ p {
     z-index: 2;
 }
 
-.flip-card-front.bg-gold span {
-    color: var(--orange-1);
-}
-
 .flip-card-back {
     background-color: var(--dark-1);
     color: white;
@@ -621,20 +671,73 @@ p {
     line-height: 1.6;
 }
 
-/* Curiosities Grid Layout */
+/* Curiosities Carousel Layout */
 .curiosities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 80px;
+    padding-right: 80px;
     position: relative;
     z-index: 10;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.curiosities-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: var(--transition);
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}
+
+.prev-btn,
+.prev-video-btn {
+    padding-right: 4px;
+}
+
+.next-btn,
+.next-video-btn {
+    padding-left: 4px;
 }
 
 .curiosity-card {
     position: relative;
     padding: 2.5rem 1.75rem;
     border-radius: 12px;
-    background: #7d261e;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/bg-nucleo-a.webp');
+    background-repeat: repeat;
     /* Solid dark reddish color based on reference */
     border: none;
     overflow: hidden;
@@ -645,12 +748,12 @@ p {
     transition: var(--transition);
     color: var(--beige-1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
 
-.curiosity-card:hover {
-    transform: translateY(-5px);
-    background: #8e2b22;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    /* Carousel item props */
+    min-width: 300px;
+    max-width: 350px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
 }
 
 .curiosity-card .bg-number {
@@ -672,19 +775,28 @@ p {
     z-index: 1;
 }
 
-.curiosity-card h3 {
-    font-size: 1.15rem;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-    font-family: "Globotipo", sans-serif;
+.curiosity-card p {
     font-weight: 700;
 }
 
+.curiosity-card h3 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-family: 'forevs', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--gold-3);
+}
+
 .curiosity-card p {
+    font-family: "Globotipo", sans-serif;
+    font-weight: 400;
     font-size: 0.95rem;
-    opacity: 0.65;
+    opacity: 1;
     margin: 0;
     line-height: 1.5;
+    color: #fff;
 }
 
 /* Footer */
@@ -837,7 +949,8 @@ p {
     }
 
     .pane-img {
-        min-height: 300px;
+        min-height: 400px;
+        width: 100%;
     }
 
     .hero .title {
@@ -849,7 +962,10 @@ p {
     }
 
     #img-casal {
-        min-height: 400px;
+        aspect-ratio: 3/4;
+        width: 100%;
+        height: auto;
+        min-height: auto;
     }
 
     .nav-links {
@@ -920,20 +1036,32 @@ p {
 
     /* Countdown */
     .countdown-container {
-        gap: 0.5rem;
+        width: 90%;
+        margin: 1rem auto 0;
+        justify-content: space-between;
+        gap: 0;
     }
 
     .countdown-item {
-        min-width: 60px;
-        padding: 0.5rem;
+        min-width: 0;
+        flex: 1;
+        padding: 0;
     }
 
     .countdown-value {
-        font-size: 2rem;
+        font-size: 13vw;
     }
 
     .countdown-label {
-        font-size: 0.8rem;
+        font-size: 4vw;
+        letter-spacing: 1px;
+    }
+
+    /* Curiosities Cards Mobile Adjustments */
+    .curiosity-card {
+        min-width: 260px;
+        max-width: 280px;
+        padding: 2rem 1.25rem;
     }
 
     /* Hero Subtitle */
@@ -944,11 +1072,25 @@ p {
 
     .hero-content {
         padding: 0 1rem;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn-scroll {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
     }
 
     /* Center the banner image instead of making it huge */
     .main-logo {
-        max-width: 90% !important;
+        max-width: 100% !important;
+        width: 100% !important;
     }
 
     /* Container global width adjustments for mobile */
@@ -959,7 +1101,6 @@ p {
 
     /* Synopsis Section (glass-light padding) e Casal padding */
     .glass-light {
-        padding: 1.5rem 1rem;
         width: 100%;
     }
 
@@ -974,6 +1115,10 @@ p {
         line-height: 1.4;
     }
 
+    .heading-xl {
+        font-size: 3rem;
+    }
+
     .heading-lg {
         font-size: 2.2rem;
     }
@@ -981,4 +1126,104 @@ p {
     .heading-md {
         font-size: 1.8rem;
     }
+
+    .split-pane .pane-content {
+        width: 100%;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    /* Footer 2 col mobile adjusted */
+    .credits-grid {
+        grid-template-columns: repeat(2, minmax(0, auto));
+        gap: 1.5rem;
+    }
+}
+
+/* Video Carousel */
+.video-carousel-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video-carousel-container .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: var(--transition);
+}
+
+.video-carousel-container .carousel-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.video-carousel-container .prev-video-btn {
+    left: -70px;
+}
+
+.video-carousel-container .next-video-btn {
+    right: -70px;
+}
+
+@media (max-width: 1300px) {
+    .video-carousel-container .prev-video-btn {
+        left: 10px;
+    }
+
+    .video-carousel-container .next-video-btn {
+        right: 10px;
+    }
+}
+
+/* Poll Section */
+.poll-option {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    transition: var(--transition);
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Globotipo", sans-serif;
+}
+
+#btn-trono {
+    background-color: var(--teal-2);
+}
+
+#btn-amor {
+    background-color: var(--red-2);
+}
+
+.poll-option:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.poll-option:disabled {
+    cursor: default;
+    transform: none;
+    filter: none;
+}
+
+.poll-text {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
 }

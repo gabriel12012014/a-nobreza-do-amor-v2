@@ -11,22 +11,25 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Performance Preloads -->
-    <link rel="preload" href="assets/banner/ANDA_LOGO_FG.webp" as="image">
-    <link rel="preload" href="assets/casal.webp" as="image">
+    <!-- Logo e CSS críticos carregam primeiro -->
+    <link rel="preload" href="assets/banner/logo.webp" as="image" fetchpriority="high">
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
 </head>
 
 <body>
 
-    <header class="hero" id="hero-section"
-        style="background-image: url('assets/casal.webp'); background-size: cover; background-position: center;">
+    <header class="hero" id="hero-section">
+        <video muted playsinline preload="metadata" class="hero-video" id="hero-video" style="opacity: 0;">
+            <source data-src="assets/banner/banner-video-v2.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-content fade-in-up">
-            <img src="assets/banner/ANDA_LOGO_FG.webp" alt="A Nobreza do Amor - Logo" class="main-logo" fetchpriority="high"
-                style="max-width: 80%; height: auto; margin-bottom: 0.5rem;">
+            <img src="assets/banner/logo.webp" alt="A Nobreza do Amor - Logo" class="main-logo" fetchpriority="high"
+                loading="eager"
+                style="max-width: 80%; height: auto; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));">
             <h2 class="subtitle" style="color: #FFFFFF; max-width: 700px; margin: 0 auto 2rem auto;">A conexão
-                Brasil-África nunca esteve tão forte na teledramaturgia brasileira.
-                Em uma superprodução, o universo de reis e rainhas africanas encontra o calor do sertão nordestino.</h2>
+                Brasil-África nunca esteve tão forte na teledramaturgia brasileira. Em uma superprodução, o universo de
+                reis e rainhas africanas encontra o calor do sertão nordestino.</h2>
 
             <div class="btn-scroll" style="cursor: default; pointer-events: none;">
                 Descubra a História
@@ -36,7 +39,11 @@
     </header>
 
     <!-- Countdown Section -->
-    <section class="section text-center padding-md">
+    <section class="section text-center padding-md"
+        style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow-x: hidden; position: relative; background-image: linear-gradient(#000, #000), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/fundoAreia.webp'); background-size: cover; background-position: center; background-blend-mode: color, normal, multiply, normal;">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 20px; background: url('assets/barra.webp') repeat-x center; background-size: auto 100%;">
+        </div>
         <h2 class="heading-lg clr-gold mb-md">Contagem Regressiva para a Estreia</h2>
         <div id="countdown" class="countdown-container">
             <div class="countdown-item">
@@ -56,27 +63,27 @@
                 <span class="countdown-label">Seg</span>
             </div>
         </div>
+        <div
+            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 20px; background: url('assets/barra.webp') repeat-x center; background-size: auto 100%;">
+        </div>
     </section>
 
     <main>
         <!-- SINOPSE CURTA -->
         <section id="sinopse" class="section bg-beige">
-            <div class="container">
-                <div class="text-center section-header">
-                    <h2 class="heading-md clr-red">A Conexão Brasil-África</h2>
+            <div class="container" style="max-width: 660px;">
+                <div class="section-header">
+                    <h2 class="heading-md clr-gold" style="margin-bottom: 1.5rem;">A Conexão Brasil-África</h2>
                 </div>
                 <div class="content-box glass-light">
-                    <p>A conexão Brasil-África nunca esteve tão forte na teledramaturgia brasileira: em <strong>A
-                            Nobreza do Amor</strong>, próxima novela das seis da TV Globo, o país e o continente se
-                        aproximam para abrigar uma história de amor e aventura, em uma superprodução que reúne um grande
-                        elenco – com Lázaro Ramos vivendo seu primeiro vilão – e apresenta ao público cenas de tirar o
-                        fôlego.</p>
-                    <p>O universo de reis e rainhas africanas, batalhas, disputa de poder, luta por justiça e o
-                        despertar do amor entre uma princesa africana e um trabalhador de engenho do Nordeste são alguns
-                        dos elementos dessa fábula que promete encantar e emocionar, com muito romance e toques de
-                        humor. Prevista para estrear dia 16 de março, a obra é criada e escrita por Duca Rachid, Júlio
-                        Fischer e Elisio Lopes Jr., com direção artística de Gustavo Fernández e produção de Andrea
-                        Kelly.</p>
+                    <p>Em A Nobreza do Amor, próxima novela das seis da TV Globo, o público será apresentado a uma saga
+                        que atravessa continentes, em uma superprodução que reúne um grande elenco, com Lázaro Ramos
+                        vivendo seu primeiro vilão. No meio desta história de batalhas e luta por justiça, desperta o
+                        amor entre uma princesa africana disfarçada e um trabalhador do de engenho.</p>
+                    <p>A África e o Nordeste brasileiro servem como cenário desta fábula, que promete encantar e
+                        emocionar, com muito romance e toques de humor. Criada e escrita por Duca Rachid, Júlio Fischer
+                        e Elisio Lopes Jr., com direção artística de Gustavo Fernández e produção de Andrea Kelly, a
+                        trama estreia no dia 16 de março.</p>
                 </div>
             </div>
         </section>
@@ -87,59 +94,134 @@
                 <div class="col-half hero-casal" id="img-casal"></div>
                 <div class="col-half my-auto content-casal padding-lg">
                     <h2 class="heading-xl clr-gold">Mundos Distintos,<br>Um Só Destino</h2>
-                    <h3 class="heading-sm clr-gold">Alika e Tonho</h3>
-                    <p>Em <em>A Nobreza do Amor</em>, Duda Santos e Ronald Sotto interpretam o casal protagonista
-                        <strong>Alika</strong> e <strong>Tonho</strong>. Princesa e futura rainha de Batanga, Alika foge
-                        para o Brasil para escapar do vilão Jendal. Longe de sua terra, agora usando a identidade de
-                        <em>Lúcia</em>, ela desembarca em Barro Preto.
-                    </p>
-                    <p>É no Brasil que Lúcia/Alika conhece Tonho, um jovem trabalhador de engenho, filho de Caetana
-                        (Cyria Coentro), um rapaz simples, sensível, honesto e com forte senso de justiça, afilhado do
-                        poderoso Coronel Casemiro Bonafé. O encanto entre a princesa destemida e o homem da terra é
-                        imediato. Ao mesmo tempo que Alika busca retomar Batanga, Tonho sonha com um pedaço de terra
-                        para ajudar seu povo. O amor floresce, mas terá que lidar com as intrigas cruzadas que cercam
-                        suas vidas e com as armações do ambicioso Mirinho.</p>
+                    <p>Duda Santos e Ronald Sotto dão vida aos personagens que conduzem essa história. Futura rainha de
+                        Batanga, a princesa Alika (Duda) se vê obrigada a fugir para o Brasil após um golpe de estado do
+                        primeiro-ministro Jendal (Lázaro Ramos), após chantageá-la a se casar com ela, em um matrimônio
+                        que não chega a ser consumado.</p>
+                    <p>É no interior do Rio Grande do Norte, na fictícia Barro Preto, que ela assume a identidade de
+                        Lúcia e conhece Tonho (Ronald), um jovem trabalhador de engenho sensível, honesto e com forte
+                        senso de justiça.</p>
+                    <p>O encanto entre a princesa destemida e o homem da terra é imediato. Ao mesmo tempo que Alika
+                        busca retornar para Batanga e derrubar o golpista Jendal, Tonho sonha com um pedaço de terra
+                        para ajudar seu povo.</p>
+                    <p>O amor floresce, mas terá que lidar com as intrigas cruzadas que cercam suas vidas.</p>
                 </div>
             </div>
         </section>
 
         <!-- DOIS MUNDOS (BATANGA E BARRO PRETO) -->
         <section id="mundos" class="section split-section overflow-hidden">
-            <div class="split-pane pane-batanga reveal-left">
-                <div class="pane-img" id="img-batanga"></div>
-                <div class="pane-content">
-                    <h2 class="heading-lg clr-gold">Reino de Batanga</h2>
-                    <p>A história começa na fictícia Batanga. O reino está situado na costa ocidental da África e foi
-                        concebido a partir de várias referências históricas e culturais de países africanos. No passado,
-                        Batanga foi uma colônia portuguesa e retomou sua liberdade no final do século XIX em uma guerra
-                        liderada por seu futuro rei, Cayman II, com o apoio de Niara e Jendal.</p>
-                    <p>A herdeira do trono, Princesa Alika, luta contra o avanço das ambições do frio vilão Jendal, que
-                        dá um golpe de mestre e se autoproclama rei. Mas o destino da família real não é a submissão, e
-                        sim uma fuga perigosa rumo a um novo mundo com a ajuda de Omar, cruzando o oceano em busca de
-                        justiça e reconquista.</p>
+            <div class="split-pane pane-batanga" style="flex-wrap: wrap;">
+                <div class="pane-content bg-batanga" style="flex: 1 1 50%;">
+                    <h2 class="heading-lg" style="color: white;">Reino de Batanga</h2>
+                    <p>A fictícia Batanga foi uma colônia portuguesa e retomou sua liberdade no final do século XIX em
+                        uma guerra liderada por seu futuro rei, Cayman II (Welket Bungué), com o apoio de Niara (Erika
+                        Januza), a futura rainha, e Jendal (Lázaro Ramos), que se tornou primeiro-ministro do país. Já
+                        em tempos de paz, Alika, herdeira do trono, é prometida em casamento para o primeiro-ministro
+                        Jendal, homem de confiança do rei, com o objetivo de protegê-la do mal que o oráculo previu para
+                        o reino.</p>
+                    <p>Quando Jendal orquestra um golpe de estado, antes de morrer, o rei confia à filha a missão de
+                        limpar seu nome e recuperar o trono. Alike e Niara fogem para o Brasil, onde assumem a
+                        identidade, respectivamente, de Lucia e Vera.</p>
+                </div>
+                <div class="pane-img" id="img-batanga" style="flex: 1 1 50%;"></div>
+
+                <div class="batanga-videos-section bg-batanga" style="flex: 1 1 100%; padding: 4rem 2rem;">
+                    <div class="video-carousel-container" style="max-width: 900px; margin: 0 auto; position: relative;">
+                        <!-- Arrows -->
+                        <button class="carousel-btn prev-video-btn" aria-label="Previous Video" style="left: -70px;">
+                            <img src="assets/setav2.webp" alt="Seta Esquerda"
+                                style="width: 60px; height: auto; transform: scaleX(-1);">
+                        </button>
+
+                        <!-- Videos Container -->
+                        <div class="video-carousel-track"
+                            style="display: flex; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000;">
+                            <div class="video-slide"
+                                style="flex: 0 0 100%; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                <iframe width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/_Rg9GDfd4cI?enablejsapi=1" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-slide"
+                                style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
+                                <iframe width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/QEs4cNRuXbw?enablejsapi=1" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-slide"
+                                style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
+                                <iframe width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/2474fSZh9_w?enablejsapi=1" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-slide"
+                                style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
+                                <iframe width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/peIZxZaQjfk?enablejsapi=1" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <!-- Right Arrow -->
+                        <button class="carousel-btn next-video-btn" aria-label="Next Video" style="right: -70px;">
+                            <img src="assets/setav2.webp" alt="Seta Direita" style="width: 60px; height: auto;">
+                        </button>
+
+                        <!-- Dots indicator -->
+                        <div class="video-dots"
+                            style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                            <span class="video-dot active" data-index="0"
+                                style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--gold-3); cursor: pointer; transition: 0.3s; opacity: 1;"></span>
+                            <span class="video-dot" data-index="1"
+                                style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
+                            <span class="video-dot" data-index="2"
+                                style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
+                            <span class="video-dot" data-index="3"
+                                style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="split-pane pane-barropreto reveal-right">
-                <div class="pane-img" id="img-barropreto"></div>
-                <div class="pane-content">
-                    <h2 class="heading-lg clr-orange">Barro Preto</h2>
-                    <p>Do outro lado do Atlântico, a cidade fictícia de Barro Preto, no interior do Rio Grande do Norte,
-                        nos anos 1920. Um pequeno município do interior que nem imagina ter se tornado refúgio da
-                        realeza da longínqua Batanga.</p>
-                    <p>É lá que a Rainha Niara e a Princesa Alika chegam escondidas sob as identidades de Vera e Lúcia.
-                        Elas são acolhidas por Zambi (José) e encontram, em meio às vastas plantações de cana-de-açúcar
-                        e ao domínio dos coronéis Bonafé, os primeiros aliados para retomar seu lar, além de descobertas
-                        surpreendentes que mudarão seus destinos.</p>
+            <div class="split-pane pane-barropreto" style="flex-wrap: wrap;">
+                <div class="pane-content bg-barropreto" style="flex: 1 1 50%;">
+                    <h2 class="heading-lg" style="color: white;">Barro Preto</h2>
+                    <p>É na cidade fictícia de Barro Preto que os laços entre África e Brasil se fortalecem ainda mais.
+                        Preservando sua essência provinciana, mas cultivando ares cosmopolitas, o pequeno município do
+                        interior do Rio Grande do Norte nem imagina ter se tornado refúgio da realeza da longínqua
+                        Batanga.</p>
+                    <p>O encanto entre Alika e Tonho é imediato, mas a princesa, que não desistirá de reavar Batanga,
+                        também terá que lidar com as armações de Mirinho (Nicolas Prattes), futuro herdeiro do engenho
+                        onde Tonho trabalha. As investidas de Mirinho sobre Alika deixam sua namorada, a mimada Virgínia
+                        (Theresa Fonseca), possessa, levando-a a conspirar contra a recém-chegada.</p>
+                </div>
+                <div class="pane-img" id="img-barropreto" style="flex: 1 1 50%;"></div>
+
+                <div class="barropreto-videos-section bg-barropreto" style="flex: 1 1 100%; padding: 4rem 2rem;">
+                    <div class="video-container"
+                        style="max-width: 900px; margin: 0 auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OJgFscvM97s"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- NÚCLEO BATANGA -->
         <section id="elenco-batanga" class="section"
-            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/bg-nucleo-a.jpg'); background-repeat: repeat; padding-bottom: 4rem;">
+            style="background-image: url('assets/bg-nucleo-a.webp'); background-repeat: repeat; padding-bottom: 4rem;">
             <div class="container text-center mb-md">
-                <h2 class="heading-lg" style="color: var(--beige-1);">Conheça Quem Faz a História</h2>
+                <h2 class="heading-lg" style="color: var(--beige-1); margin-bottom: 0.5rem;">Conheça Quem Faz a História
+                </h2>
+                <p style="color: var(--beige-1); opacity: 0.85; font-size: 1.15rem;">Descubra os personagens que vão
+                    emocionar os dois lados do Atlântico.</p>
             </div>
 
             <div class="container">
@@ -151,7 +233,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/RonaldoSotto-TonhoDudaSantos-Alika.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/alika-lucia.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Alika / Lúcia</strong>
                                         <span class="actor-name">Duda Santos</span>
@@ -175,7 +258,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/Jendal(LazaroRamos)eChinua(HiltonCobra).Oviaoobservaocasalreal.JPG.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/jendal.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Jendal</strong>
                                         <span class="actor-name">Lázaro Ramos</span>
@@ -199,7 +283,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/ErikaJanuza-RainhaNiaraCayman.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/rainha-niara-cayman.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Rainha Niara Cayman / Vera</strong>
                                         <span class="actor-name">Erika Januza</span>
@@ -247,7 +332,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/HiltonCobra-Chinua.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/chinua.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Chinua</strong>
                                         <span class="actor-name">Hilton Cobra</span>
@@ -270,7 +356,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/AndreLuizMiranda-AkinLicinioJanuario-Dumi.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/akin.webp" loading="lazy"
+                                        alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Akin</strong>
                                         <span class="actor-name">André Luiz Miranda</span>
@@ -293,7 +380,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
+                                    <img class="card-img-placeholder" src="assets/personagens/ladisa.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Ladisa</strong>
                                         <span class="actor-name">Rita Batista</span>
@@ -316,7 +404,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/NikollyFernandes-Kenia.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/kenia.webp" loading="lazy"
+                                        alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Kênia</strong>
                                         <span class="actor-name">Nikolly Fernandes</span>
@@ -339,7 +428,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/AndreLuizMiranda-AkinLicinioJanuario-Dumi.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/dumi.webp" loading="lazy"
+                                        alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Dumi</strong>
                                         <span class="actor-name">Licínio Januário</span>
@@ -362,7 +452,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/Vado-Oruka.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/oruka.webp" loading="lazy"
+                                        alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Oruka</strong>
                                         <span class="actor-name">Vado</span>
@@ -384,7 +475,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
+                                    <img class="card-img-placeholder" src="assets/personagens/paxa-soliman.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Paxá Soliman</strong>
                                         <span class="actor-name">Marco Ricca</span>
@@ -407,7 +499,8 @@
                                 <div class="flip-card-front bg-teal">
                                     <div class="card-frame card-frame-front"></div>
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/RodrigoSimas-Omar.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/RodrigoSimas-Omar.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Omar</strong>
                                         <span class="actor-name">Rodrigo Simas</span>
@@ -432,7 +525,7 @@
 
         <!-- NÚCLEO BARRO PRETO -->
         <section id="elenco-barropreto" class="section"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/bg-nucleo-b.jpg'); background-repeat: repeat; padding-bottom: 4rem;">
+            style="background-image: url('assets/bg-nucleo-b.webp'); background-repeat: repeat; padding-bottom: 4rem;">
             <div class="container">
                 <div id="nucleo-barropreto" class="nucleo-section">
                     <h3 class="heading-md text-center mb-md" style="color: var(--gold-3);">Núcleo Barro Preto</h3>
@@ -441,7 +534,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/RonaldoSotto-TonhoDudaSantos-Alika.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/tonho.webp" loading="lazy"
+                                        alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Tonho</strong>
                                         <span class="actor-name">Ronald Sotto</span>
@@ -463,8 +557,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="
-                                        assets/personagens/ZezeMotta-DonaMenina.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/dona-menina.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Dona Menina</strong>
                                         <span class="actor-name">Zezé Motta</span>
@@ -486,7 +580,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/NicolasPrattes-MirinhoBonafe.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/mirinho-bonafe.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Mirinho Bonafé</strong>
                                         <span class="actor-name">Nicolas Prattes</span>
@@ -509,7 +604,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/TheresaFonseca-Virginia.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/virginia.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Virgínia</strong>
                                         <span class="actor-name">Theresa Fonseca</span>
@@ -531,7 +627,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/bukassa-kabengele-jose-ana-cecilia-costa-teresa.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/josé.webp" loading="lazy"
+                                        alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">José / Zambi</strong>
                                         <span class="actor-name">Bukassa Kabengele</span>
@@ -554,7 +651,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/bukassa-kabengele-jose-ana-cecilia-costa-teresa.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/teresa.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Teresa</strong>
                                         <span class="actor-name">Ana Cecília Costa</span>
@@ -599,7 +697,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
+                                    <img class="card-img-placeholder" src="assets/personagens/graca-bonafe.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Graça Bonafé</strong>
                                         <span class="actor-name">Fabiana Karla</span>
@@ -710,7 +809,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/cyria-coentro.webp" loading="lazy" alt="Personagem" style="object-fit: cover;">
+                                    <img class="card-img-placeholder" src="assets/personagens/caetana.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Caetana</strong>
                                         <span class="actor-name">Cyria Coentro</span>
@@ -755,7 +855,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder"></div>
+                                    <img class="card-img-placeholder" src="assets/personagens/prefeito-bartolomeu.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Prefeito Bartô</strong>
                                         <span class="actor-name">Fábio Lago</span>
@@ -798,7 +899,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder"></div>
+                                    <img class="card-img-placeholder" src="assets/personagens/mundica.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Mundica</strong>
                                         <span class="actor-name">Samantha Jones</span>
@@ -820,7 +922,8 @@
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-gold">
                                     <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder"></div>
+                                    <img class="card-img-placeholder" src="assets/personagens/ana-maria-bonafe.webp"
+                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
                                     <div class="card-name-overlay">
                                         <strong class="char-name">Ana Maria Bonafé</strong>
                                         <span class="actor-name">Julia Lemos</span>
@@ -843,6 +946,68 @@
             </div>
         </section>
 
+        <!-- PALAVRAS DOS REALIZADORES -->
+        <section id="realizadores" class="section pt-lg mb-lg mt-lg">
+            <div class="container">
+                <div class="text-center section-header">
+                    <h2 class="heading-md clr-gold" style="text-transform: uppercase;">Palavras dos Realizadores</h2>
+                </div>
+                <div class="quote-card glass-light"
+                    style="max-width: 800px; margin: 0 auto; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--beige-1); overflow: hidden;">
+                    <p style="font-size: 1.2rem; font-style: italic; color: var(--dark-1); margin-bottom: 1.5rem;">"A
+                        Nobreza do Amor é uma história que busca celebrar as raízes profundas que conectam o Brasil e a
+                        África. Foi um desafio imenso, mas também um orgulho enorme conceber um universo tão rico e com
+                        uma mensagem tão poderosa para as telas brasileiras."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div>
+                            <strong
+                                style="color: var(--orange-1); display: block; font-size: 1.1rem; text-transform: uppercase;">Gustavo
+                                Fernández</strong>
+                            <span style="color: var(--dark-2); font-size: 0.9rem;">Diretor Artístico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENQUETE -->
+        <!-- Para reativar: remova o style="display:none;" da tag section abaixo -->
+        <section id="enquete" class="section padding-md text-center"
+            style="background: var(--dark-1) !important; display:none;">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="heading-md clr-gold mb-md" style="text-transform: uppercase;">O que você faria?</h2>
+                <p style="color: var(--beige-1); font-size: 1.2rem; margin-bottom: 2rem;">"Se você fosse Alika, você
+                    lutaria para recuperar seu trono em Batanga ou ficaria no Brasil vivendo seu amor com Tonho?"</p>
+
+                <div class="poll-container" id="poll-container"
+                    style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="poll-option" id="btn-trono" onclick="submitPoll('trono')"
+                        style="flex: 1; min-width: 250px; text-align: center;">
+                        <span class="poll-text">Lutar pelo Trono! 👑</span>
+                    </button>
+
+                    <button class="poll-option" id="btn-amor" onclick="submitPoll('amor')"
+                        style="flex: 1; min-width: 250px; text-align: center;">
+                        <span class="poll-text">Ficar pelo Amor! ❤️</span>
+                    </button>
+                </div>
+
+                <div id="composed-bar-container"
+                    style="display: none; width: 100%; height: 50px; border-radius: 8px; overflow: hidden; margin-top: 2rem; border: 2px solid rgba(255,255,255,0.1);">
+                    <div id="composed-bar-trono"
+                        style="height: 100%; width: 0%; background-color: var(--teal-1); display: flex; align-items: center; justify-content: flex-start; padding-left: 1rem; color: white; font-weight: bold; font-size: 1.2rem; transition: width 1s ease-in-out; white-space: nowrap;">
+                        <span id="pct-trono"></span>
+                    </div>
+                    <div id="composed-bar-amor"
+                        style="height: 100%; width: 0%; background-color: var(--red-1); display: flex; align-items: center; justify-content: flex-end; padding-right: 1rem; color: white; font-weight: bold; font-size: 1.2rem; transition: width 1s ease-in-out; white-space: nowrap;">
+                        <span id="pct-amor"></span>
+                    </div>
+                </div>
+
+                <p id="poll-message" style="margin-top: 1rem; color: var(--gold-3); display: none;"></p>
+            </div>
+        </section>
+
         <!-- CURIOSIDADES -->
         <section id="curiosidades" class="section overflow-hidden mb-lg pt-lg">
             <div class="container text-center mb-md">
@@ -852,51 +1017,109 @@
             </div>
 
             <div class="container">
-                <div class="curiosities-grid">
-                    <!-- Card 1 -->
-                    <div class="curiosity-card glass">
-                        <span class="bg-number">01</span>
-                        <h3 class="clr-gold uppercase mb-sm">Expedição RN</h3>
-                        <p>Em dezembro, 150 pessoas e 25 toneladas de equipamentos desembarcaram no Rio Grande do Norte
-                            para gravar em dunas, falésias e praias, servindo de locação tanto para Batanga quanto Barro
-                            Preto.</p>
+                <div class="carousel-container" style="position: relative;">
+                    <button class="carousel-btn prev-btn" aria-label="Previous">
+                        <img src="assets/setav2.webp" alt="Seta Esquerda"
+                            style="width: 60px; height: auto; transform: scaleX(-1);">
+                    </button>
+                    <div class="curiosities-grid" id="curiosities-carousel">
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">01</span>
+                            <h3>Curiosidade 1</h3>
+                            <p>Os trabalhos foram iniciados em dezembro, no Rio Grande do Norte, onde desembarcou um
+                                grupo
+                                de 150 pessoas e mais de 25 toneladas de equipamentos, para gravar em diferentes
+                                paisagens,
+                                incluindo dunas, falésias, praias e parques. O local serviu tanto para Batanga quanto
+                                Barro
+                                Preto.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">02</span>
+                            <h3>Curiosidade 2</h3>
+                            <p>A logística envolveu caminhões de figurino, de produção de arte, além de um camarim
+                                móvel, e
+                                equipamentos, como câmeras, drones e geradores.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">03</span>
+                            <h3>Curiosidade 3</h3>
+                            <p>Foram usados também cerca de seis veículos com estruturas desenvolvidas para garantir a
+                                estabilidade das câmeras em cenas de movimento em terreno arenoso.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">04</span>
+                            <h3>Curiosidade 4</h3>
+                            <p>A gerente de produção Andrea Kelly comentou sobre as gravações no Rio Grande do Norte,
+                                escolhido, entre outros aspectos, por uma questão geográfica: “A menor distância entre o
+                                Brasil e a África está nesse estado, em um ponto onde se costuma falar que o vento faz a
+                                curva. Buscamos, então, locações que refletissem as muitas semelhanças entre os dois
+                                continentes. O resultado ficou lindo, e nos dá um orgulho imenso”, disse ela.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">05</span>
+                            <h3>Curiosidade 5</h3>
+                            <p>Entre os cenários escolhidos para a novela, estão o Parque Nacional da Furna Feia, Dunas
+                                do
+                                Rosado, Maracajaú e Barreira do Inferno, com passagens pelas cidades de Areia Branca,
+                                Porto
+                                do Mangue, Guamaré, Macau, Maxaranguape, Mossoró, Parnamirim e Tibau do Sul, além da
+                                capital
+                                Natal.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">06</span>
+                            <h3>Curiosidade 6</h3>
+                            <p>Em janeiro, Niterói, no Rio de Janeiro, serviu como um “campo de batalha”, dando início à
+                                segunda fase das gravações. A equipe gravou na Fortaleza de Santa Cruz da Barra as cenas
+                                em
+                                que ocorre a batalhas do dos africanos contra os colonizadores portugueses pela
+                                independência;</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">07</span>
+                            <h3>Curiosidade 7</h3>
+                            <p>Além disso, no mesmo local, foram filmadas a coroação do rei Cayman (Welket Bungué) e da
+                                rainha Niara (Erika Januza), a apresentação da recém-nascida princesa Alika (Duda
+                                Santos)
+                                aos súditos, o golpe de Jendal (Lázaro Ramos).</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">08</span>
+                            <h3>Curiosidade 8</h3>
+                            <p>Outras locações no Rio de Janeiro, como pedreiras, fazendas e canaviais, também serão
+                                usadas
+                                para as gravações, envolvendo personagens tanto de Batanga quanto de Barro Preto.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">09</span>
+                            <h3>Curiosidade 9</h3>
+                            <p>Batanga, segundo Gustavo Fernández, foi concebida com uma estética cheia de referências
+                                ao
+                                continente africano. “É a primeira vez que a TV Globo se aprofunda na representação da
+                                África dessa maneira, com uma narrativa inteira, rica em diversidade e pesquisa
+                                minuciosa.
+                                Cada detalhe, das roupas aos cenários, foi inspirado em referências reais, fruto de um
+                                trabalho cuidadoso”, explica Fernández.</p>
+                        </div>
+                        <div class="curiosity-card glass">
+                            <span class="bg-number">10</span>
+                            <h3>Curiosidade 10</h3>
+                            <p>“Já Barro Preto, nossa cidade brasileira”, continua o diretor. “Tem um visual ainda mais
+                                fabular do que Batanga. Não é sertão, nem litoral, a cidade está situada em uma falésia,
+                                isolada, criando um microcosmo único”, contextualiza o diretor.</p>
+                        </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="curiosity-card glass">
-                        <span class="bg-number">02</span>
-                        <h3 class="clr-gold uppercase mb-sm">A Menor Distância</h3>
-                        <p>"A menor distância entre o Brasil e a África está nesse estado. Buscamos locações que
-                            refletissem as semelhanças entre os dois continentes", disse Andrea Kelly, gerente de
-                            produção.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="curiosity-card glass">
-                        <span class="bg-number">03</span>
-                        <h3 class="clr-gold uppercase mb-sm">O Campo de Batalha</h3>
-                        <p>Em janeiro, Niterói (RJ) tornou-se cenário da guerra de independência de Batanga. A Fortaleza
-                            de Santa Cruz da Barra abrigou a coroação de Cayman e as cenas do terrível golpe de Jendal.
-                        </p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="curiosity-card glass">
-                        <span class="bg-number">04</span>
-                        <h3 class="clr-gold uppercase mb-sm">Estéticas Opostas</h3>
-                        <p>Enquanto Batanga exibe referências reais e ricas do continente africano, Barro Preto tem um
-                            visual quase fabular, erguendo-se em uma falésia isolada, criando um microcosmo único.</p>
-                    </div>
+                    <button class="carousel-btn next-btn" aria-label="Next">
+                        <img src="assets/setav2.webp" alt="Seta Direita" style="width: 60px; height: auto;">
+                    </button>
                 </div>
             </div>
-        </section>
-        </div>
         </section>
     </main>
 
     <footer class="footer padding-md">
         <div class="container footer-content">
-            <h2 class="footer-title">A NOBREZA DO AMOR</h2>
-            <p class="footer-subtitle">Criada e escrita por Duca Rachid, Júlio Fischer e Elísio Lopes Jr. Direção:
-                Gustavo Fernández.</p>
-
             <div class="footer-divider"></div>
 
             <h3 class="footer-section-title">CRÉDITOS OFICIAIS</h3>
@@ -932,14 +1155,6 @@
                     </div>
                 </div>
 
-                <!-- Column 3 -->
-                <div class="credits-col">
-                    <div class="credit-block">
-                        <h4>COORDENAÇÃO DE DESIGN E<br>DESENVOLVIMENTO</h4>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
