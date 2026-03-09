@@ -248,6 +248,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Poll Logic Inicialização
+    // Tenta buscar os dados mais atualizados assim que entra na página
+    fetch(pollApiUrl)
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === "success" && (data.trono > 0 || data.amor > 0)) {
+                // Salva os valores atualizados em cache
+                localStorage.setItem('cachedVotesTrono', data.trono);
+                localStorage.setItem('cachedVotesAmor', data.amor);
+
+                // Se já votou antes, já atualiza as barras silenciosamente e exibe a barra
+                if (hasVoted) {
+                    updatePollUI(data.trono, data.amor);
+                }
+            }
+        })
+        .catch(err => console.error("Erro ao carregar votos via API", err));
+
+    // Enquanto o fetch acima pensa, se o usuário já votou, exibe imediatamente pelo cache
+    if (hasVoted) {
+        let votesTrono = parseInt(localStorage.getItem('cachedVotesTrono') || '0');
+        let votesAmor = parseInt(localStorage.getItem('cachedVotesAmor') || '0');
+        if (votesTrono > 0 || votesAmor > 0) {
+            updatePollUI(votesTrono, votesAmor);
+        }
+    }
+
 });
 
 // Poll Logic
@@ -318,32 +345,3 @@ function updatePollUI(tronoVotes, amorVotes) {
         });
     }
 }
-
-// Ao carregar a página
-document.addEventListener('DOMContentLoaded', () => {
-    // Tenta buscar os dados mais atualizados assim que entra na página
-    fetch(pollApiUrl)
-        .then(res => res.json())
-        .then(data => {
-            if (data.status === "success" && (data.trono > 0 || data.amor > 0)) {
-                // Salva os valores atualizados em cache
-                localStorage.setItem('cachedVotesTrono', data.trono);
-                localStorage.setItem('cachedVotesAmor', data.amor);
-
-                // Se já votou antes, já atualiza as barras silenciosamente e exibe a barra
-                if (hasVoted) {
-                    updatePollUI(data.trono, data.amor);
-                }
-            }
-        })
-        .catch(err => console.error("Erro ao carregar votos via API", err));
-
-    // Enquanto o fetch acima pensa, se o usuário já votou, exibe imediatamente pelo cache
-    if (hasVoted) {
-        let votesTrono = parseInt(localStorage.getItem('cachedVotesTrono') || '0');
-        let votesAmor = parseInt(localStorage.getItem('cachedVotesAmor') || '0');
-        if (votesTrono > 0 || votesAmor > 0) {
-            updatePollUI(votesTrono, votesAmor);
-        }
-    }
-});

@@ -13,7 +13,10 @@
     <!-- Performance Preloads -->
     <!-- Logo e CSS críticos carregam primeiro -->
     <link rel="preload" href="assets/banner/logo.webp" as="image" fetchpriority="high">
-    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <!-- Otimizações para Iframes do YouTube -->
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="preconnect" href="https://s.ytimg.com">
 </head>
 
 <body>
@@ -25,11 +28,13 @@
         <div class="hero-overlay"></div>
         <div class="hero-content fade-in-up">
             <img src="assets/banner/logo.webp" alt="A Nobreza do Amor - Logo" class="main-logo" fetchpriority="high"
-                loading="eager"
+                loading="eager" width="800" height="400"
                 style="max-width: 80%; height: auto; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));">
-            <h2 class="subtitle" style="color: #FFFFFF; max-width: 700px; margin: 0 auto 2rem auto;">A conexão
-                Brasil-África nunca esteve tão forte na teledramaturgia brasileira. Em uma superprodução, o universo de
-                reis e rainhas africanas encontra o calor do sertão nordestino.</h2>
+            <h2 class="subtitle" style="color: #FFFFFF; max-width: 700px; margin: 2rem auto 2rem auto;">A conexão
+                <strong>Brasil-África</strong> nunca esteve tão forte na teledramaturgia brasileira. Em uma
+                <strong>superprodução</strong>, o universo de
+                <strong>reis e rainhas africanas</strong> encontra o <strong>calor do sertão nordestino</strong>.
+            </h2>
 
             <div class="btn-scroll" style="cursor: default; pointer-events: none;">
                 Descubra a História
@@ -44,7 +49,8 @@
         <div
             style="position: absolute; top: 0; left: 0; width: 100%; height: 20px; background: url('assets/barra.webp') repeat-x center; background-size: auto 100%;">
         </div>
-        <h2 class="heading-lg clr-gold mb-md">Contagem Regressiva para a Estreia</h2>
+        <img src="assets/titulos/estreia-em.webp" alt="Estreia em" class="estreia-img" width="380" height="90"
+            style="width: 100%; max-width: 380px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
         <div id="countdown" class="countdown-container">
             <div class="countdown-item">
                 <span id="days" class="countdown-value">00</span>
@@ -73,17 +79,26 @@
         <section id="sinopse" class="section bg-beige">
             <div class="container" style="max-width: 660px;">
                 <div class="section-header">
-                    <h2 class="heading-md clr-gold" style="margin-bottom: 1.5rem;">A Conexão Brasil-África</h2>
+                    <img src="assets/titulos/a-conexao.webp" alt="A conexão Brasil - África" loading="lazy" width="600"
+                        height="150"
+                        style="max-width: 100%; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
                 </div>
                 <div class="content-box glass-light">
-                    <p>Em A Nobreza do Amor, próxima novela das seis da TV Globo, o público será apresentado a uma saga
-                        que atravessa continentes, em uma superprodução que reúne um grande elenco, com Lázaro Ramos
-                        vivendo seu primeiro vilão. No meio desta história de batalhas e luta por justiça, desperta o
-                        amor entre uma princesa africana disfarçada e um trabalhador do de engenho.</p>
-                    <p>A África e o Nordeste brasileiro servem como cenário desta fábula, que promete encantar e
-                        emocionar, com muito romance e toques de humor. Criada e escrita por Duca Rachid, Júlio Fischer
-                        e Elisio Lopes Jr., com direção artística de Gustavo Fernández e produção de Andrea Kelly, a
-                        trama estreia no dia 16 de março.</p>
+                    <p>Em <strong>A Nobreza do Amor</strong>, próxima <strong>novela das seis da TV Globo</strong>, o
+                        público será apresentado a uma saga
+                        que atravessa continentes, em uma superprodução que reúne um grande elenco, com <strong>Lázaro
+                            Ramos
+                            vivendo seu primeiro vilão</strong>. No meio desta história de batalhas e luta por justiça,
+                        desperta o
+                        <strong>amor entre uma princesa africana disfarçada e um trabalhador do de engenho</strong>.
+                    </p>
+                    <p>A <strong>África</strong> e o <strong>Nordeste brasileiro</strong> servem como cenário desta
+                        fábula, que promete encantar e
+                        emocionar, com muito romance e toques de humor. Criada e escrita por <strong>Duca Rachid, Júlio
+                            Fischer
+                            e Elisio Lopes Jr.</strong>, com direção artística de <strong>Gustavo Fernández</strong> e
+                        produção de <strong>Andrea Kelly</strong>, a
+                        trama estreia no dia <strong>16 de março</strong>.</p>
                 </div>
             </div>
         </section>
@@ -93,18 +108,28 @@
             <div class="container flex-row reveal">
                 <div class="col-half hero-casal" id="img-casal"></div>
                 <div class="col-half my-auto content-casal padding-lg">
-                    <h2 class="heading-xl clr-gold">Mundos Distintos,<br>Um Só Destino</h2>
-                    <p>Duda Santos e Ronald Sotto dão vida aos personagens que conduzem essa história. Futura rainha de
-                        Batanga, a princesa Alika (Duda) se vê obrigada a fugir para o Brasil após um golpe de estado do
-                        primeiro-ministro Jendal (Lázaro Ramos), após chantageá-la a se casar com ela, em um matrimônio
+                    <img src="assets/titulos/mundos-distante.webp" alt="Mundos Distintos, Um Só Destino" loading="lazy"
+                        width="500" height="150"
+                        style="max-width: 70%; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
+                    <p><strong>Duda Santos</strong> e <strong>Ronald Sotto</strong> dão vida aos personagens que
+                        conduzem essa história. Futura rainha de
+                        Batanga, a princesa <strong>Alika</strong> (Duda) se vê obrigada a <strong>fugir para o Brasil
+                            após um golpe de estado</strong> do
+                        primeiro-ministro <strong>Jendal (Lázaro Ramos)</strong>, após chantageá-la a se casar com ela,
+                        em um matrimônio
                         que não chega a ser consumado.</p>
-                    <p>É no interior do Rio Grande do Norte, na fictícia Barro Preto, que ela assume a identidade de
-                        Lúcia e conhece Tonho (Ronald), um jovem trabalhador de engenho sensível, honesto e com forte
-                        senso de justiça.</p>
+                    <p>É no interior do <strong>Rio Grande do Norte</strong>, na fictícia <strong>Barro Preto</strong>,
+                        que ela assume a identidade de
+                        <strong>Lúcia</strong> e conhece <strong>Tonho (Ronald)</strong>, um jovem trabalhador de
+                        engenho sensível, honesto e com forte
+                        senso de justiça.
+                    </p>
                     <p>O encanto entre a princesa destemida e o homem da terra é imediato. Ao mesmo tempo que Alika
-                        busca retornar para Batanga e derrubar o golpista Jendal, Tonho sonha com um pedaço de terra
+                        busca <strong>retornar para Batanga e derrubar o golpista Jendal</strong>, Tonho sonha com um
+                        pedaço de terra
                         para ajudar seu povo.</p>
-                    <p>O amor floresce, mas terá que lidar com as intrigas cruzadas que cercam suas vidas.</p>
+                    <p><strong>O amor floresce</strong>, mas terá que lidar com as intrigas cruzadas que cercam suas
+                        vidas.</p>
                 </div>
             </div>
         </section>
@@ -113,24 +138,33 @@
         <section id="mundos" class="section split-section overflow-hidden">
             <div class="split-pane pane-batanga" style="flex-wrap: wrap;">
                 <div class="pane-content bg-batanga" style="flex: 1 1 50%;">
-                    <h2 class="heading-lg" style="color: white;">Reino de Batanga</h2>
-                    <p>A fictícia Batanga foi uma colônia portuguesa e retomou sua liberdade no final do século XIX em
-                        uma guerra liderada por seu futuro rei, Cayman II (Welket Bungué), com o apoio de Niara (Erika
-                        Januza), a futura rainha, e Jendal (Lázaro Ramos), que se tornou primeiro-ministro do país. Já
-                        em tempos de paz, Alika, herdeira do trono, é prometida em casamento para o primeiro-ministro
+                    <img src="assets/titulos/reino-batanga.webp" alt="Reino de Batanga" loading="lazy" width="350"
+                        height="100"
+                        style="width: 100%; max-width: 350px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
+                    <p>A fictícia <strong>Batanga</strong> foi uma colônia portuguesa e <strong>retomou sua liberdade no
+                            final do século XIX</strong> em
+                        uma guerra liderada por seu futuro rei, <strong>Cayman II (Welket Bungué)</strong>, com o apoio
+                        de <strong>Niara (Erika
+                            Januza)</strong>, a futura rainha, e <strong>Jendal (Lázaro Ramos)</strong>, que se tornou
+                        primeiro-ministro do país. Já
+                        em tempos de paz, <strong>Alika, herdeira do trono</strong>, é prometida em casamento para o
+                        primeiro-ministro
                         Jendal, homem de confiança do rei, com o objetivo de protegê-la do mal que o oráculo previu para
                         o reino.</p>
-                    <p>Quando Jendal orquestra um golpe de estado, antes de morrer, o rei confia à filha a missão de
-                        limpar seu nome e recuperar o trono. Alike e Niara fogem para o Brasil, onde assumem a
-                        identidade, respectivamente, de Lucia e Vera.</p>
+                    <p>Quando <strong>Jendal orquestra um golpe de estado</strong>, antes de morrer, o rei confia à
+                        filha a missão de
+                        <strong>limpar seu nome e recuperar o trono</strong>. Alike e Niara fogem para o Brasil, onde
+                        assumem a
+                        identidade, respectivamente, de <strong>Lucia</strong> e <strong>Vera</strong>.
+                    </p>
                 </div>
                 <div class="pane-img" id="img-batanga" style="flex: 1 1 50%;"></div>
 
                 <div class="batanga-videos-section bg-batanga" style="flex: 1 1 100%; padding: 4rem 2rem;">
                     <div class="video-carousel-container" style="max-width: 900px; margin: 0 auto; position: relative;">
                         <!-- Arrows -->
-                        <button class="carousel-btn prev-video-btn" aria-label="Previous Video" style="left: -70px;">
-                            <img src="assets/setav2.webp" alt="Seta Esquerda"
+                        <button class="carousel-btn prev-video-btn" aria-label="Previous Video">
+                            <img src="assets/setav2.webp" alt="Seta Esquerda" loading="lazy"
                                 style="width: 60px; height: auto; transform: scaleX(-1);">
                         </button>
 
@@ -139,28 +173,28 @@
                             style="display: flex; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000;">
                             <div class="video-slide"
                                 style="flex: 0 0 100%; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%"
+                                <iframe width="100%" height="100%" loading="lazy"
                                     src="https://www.youtube.com/embed/_Rg9GDfd4cI?enablejsapi=1" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                             </div>
                             <div class="video-slide"
                                 style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%"
+                                <iframe width="100%" height="100%" loading="lazy"
                                     src="https://www.youtube.com/embed/QEs4cNRuXbw?enablejsapi=1" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                             </div>
                             <div class="video-slide"
                                 style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%"
+                                <iframe width="100%" height="100%" loading="lazy"
                                     src="https://www.youtube.com/embed/2474fSZh9_w?enablejsapi=1" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                             </div>
                             <div class="video-slide"
                                 style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%"
+                                <iframe width="100%" height="100%" loading="lazy"
                                     src="https://www.youtube.com/embed/peIZxZaQjfk?enablejsapi=1" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
@@ -168,8 +202,9 @@
                         </div>
 
                         <!-- Right Arrow -->
-                        <button class="carousel-btn next-video-btn" aria-label="Next Video" style="right: -70px;">
-                            <img src="assets/setav2.webp" alt="Seta Direita" style="width: 60px; height: auto;">
+                        <button class="carousel-btn next-video-btn" aria-label="Next Video">
+                            <img src="assets/setav2.webp" alt="Seta Direita" loading="lazy"
+                                style="width: 60px; height: auto;">
                         </button>
 
                         <!-- Dots indicator -->
@@ -190,15 +225,22 @@
 
             <div class="split-pane pane-barropreto" style="flex-wrap: wrap;">
                 <div class="pane-content bg-barropreto" style="flex: 1 1 50%;">
-                    <h2 class="heading-lg" style="color: white;">Barro Preto</h2>
-                    <p>É na cidade fictícia de Barro Preto que os laços entre África e Brasil se fortalecem ainda mais.
+                    <img src="assets/titulos/barro-preto.webp" alt="Barro Preto" loading="lazy" width="350" height="100"
+                        style="width: 100%; max-width: 350px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
+                    <p>É na cidade fictícia de <strong>Barro Preto</strong> que os <strong>laços entre África e
+                            Brasil</strong> se fortalecem ainda mais.
                         Preservando sua essência provinciana, mas cultivando ares cosmopolitas, o pequeno município do
-                        interior do Rio Grande do Norte nem imagina ter se tornado refúgio da realeza da longínqua
+                        interior do <strong>Rio Grande do Norte</strong> nem imagina ter se tornado <strong>refúgio da
+                            realeza</strong> da longínqua
                         Batanga.</p>
-                    <p>O encanto entre Alika e Tonho é imediato, mas a princesa, que não desistirá de reavar Batanga,
-                        também terá que lidar com as armações de Mirinho (Nicolas Prattes), futuro herdeiro do engenho
-                        onde Tonho trabalha. As investidas de Mirinho sobre Alika deixam sua namorada, a mimada Virgínia
-                        (Theresa Fonseca), possessa, levando-a a conspirar contra a recém-chegada.</p>
+                    <p>O encanto entre <strong>Alika e Tonho</strong> é imediato, mas a princesa, que não desistirá de
+                        reavar Batanga,
+                        também terá que lidar com as armações de <strong>Mirinho (Nicolas Prattes)</strong>, futuro
+                        herdeiro do engenho
+                        onde Tonho trabalha. As investidas de Mirinho sobre Alika deixam sua namorada, a mimada
+                        <strong>Virgínia
+                            (Theresa Fonseca)</strong>, possessa, levando-a a conspirar contra a recém-chegada.
+                    </p>
                 </div>
                 <div class="pane-img" id="img-barropreto" style="flex: 1 1 50%;"></div>
 
@@ -206,7 +248,7 @@
                     <div class="video-container"
                         style="max-width: 900px; margin: 0 auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center;">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OJgFscvM97s"
-                            frameborder="0"
+                            frameborder="0" loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -218,8 +260,9 @@
         <section id="elenco-batanga" class="section"
             style="background-image: url('assets/bg-nucleo-a.webp'); background-repeat: repeat; padding-bottom: 4rem;">
             <div class="container text-center mb-md">
-                <h2 class="heading-lg" style="color: var(--beige-1); margin-bottom: 0.5rem;">Conheça Quem Faz a História
-                </h2>
+                <img src="assets/titulos/conheca_quem.webp" alt="Conheça Quem Faz a História" loading="lazy" width="500"
+                    height="120"
+                    style="width: 100%; max-width: 500px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
                 <p style="color: var(--beige-1); opacity: 0.85; font-size: 1.15rem;">Descubra os personagens que vão
                     emocionar os dois lados do Atlântico.</p>
             </div>
@@ -227,298 +270,7 @@
             <div class="container">
                 <div id="nucleo-batanga" class="nucleo-section">
                     <h3 class="heading-md text-center mb-md" style="color: var(--gold-3);">Núcleo Batanga</h3>
-                    <ul class="character-grid">
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/alika-lucia.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Alika / Lúcia</strong>
-                                        <span class="actor-name">Duda Santos</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Alika
-                                        / Lúcia</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Duda Santos</span>
-                                    <p class="desc">A formosa Princesa de Batanga. Foge para o Brasil e sob a identidade
-                                        de Lúcia luta para retomar seu reino e conduzí-lo à prosperidade, enquanto vive
-                                        um amor inesperado com Tonho.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/jendal.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Jendal</strong>
-                                        <span class="actor-name">Lázaro Ramos</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Jendal</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Lázaro
-                                        Ramos</span>
-                                    <p class="desc">Primeiro-ministro que articulou o golpe de estado, tomando o poder
-                                        de Batanga para si. Ambicioso e frio, sua maior obsessão é recuperar Alika, que
-                                        lhe havia sido prometida.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/rainha-niara-cayman.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Rainha Niara Cayman / Vera</strong>
-                                        <span class="actor-name">Erika Januza</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Rainha
-                                        Niara Cayman / Vera</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Erika
-                                        Januza</span>
-                                    <p class="desc">Rainha forte que lutou ao lado do marido pela liberdade de Batanga.
-                                        Acompanha sua filha na fuga e na resistência a partir do Brasil.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Rei Jafari Cayman</strong>
-                                        <span class="actor-name">Welket Bunguê</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Rei
-                                        Jafari Cayman</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Welket
-                                        Bunguê</span>
-                                    <p class="desc">O amado Rei Cayman II, herói da liberdade de Batanga. Acaba perdendo
-                                        a vida na fuga da família real após o golpe de Jendal.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/chinua.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Chinua</strong>
-                                        <span class="actor-name">Hilton Cobra</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Chinua</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Hilton
-                                        Cobra</span>
-                                    <p class="desc">Fiel conselheiro de Cayman que permanece no cargo mesmo após o
-                                        golpe, agindo estrategicamente por dentro para ajudar a resistência.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/akin.webp" loading="lazy"
-                                        alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Akin</strong>
-                                        <span class="actor-name">André Luiz Miranda</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Akin</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">André Luiz
-                                        Miranda</span>
-                                    <p class="desc">Guerreiro valente e principal aliado de Alika e Niara fora do
-                                        palácio, na luta para derrubar o tirano.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/ladisa.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Ladisa</strong>
-                                        <span class="actor-name">Rita Batista</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Ladisa</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Rita
-                                        Batista</span>
-                                    <p class="desc">Guerreira formidável, braço direito da resistência contra as forças
-                                        golpistas do impiedoso Jendal.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/kenia.webp" loading="lazy"
-                                        alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Kênia</strong>
-                                        <span class="actor-name">Nikolly Fernandes</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Kênia</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Nikolly
-                                        Fernandes</span>
-                                    <p class="desc">Filha de Jendal. Jovem fútil e ambiciosa, deslumbrada com o poder e
-                                        luxos que a posição do pai golpista pode lhe proporcionar.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/dumi.webp" loading="lazy"
-                                        alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Dumi</strong>
-                                        <span class="actor-name">Licínio Januário</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Dumi</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Licínio
-                                        Januário</span>
-                                    <p class="desc">Chefe da guarda de Batanga. Finge apoiar Jendal para proteger e
-                                        organizar a retomada do poder atuando como agente duplo.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/oruka.webp" loading="lazy"
-                                        alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Oruka</strong>
-                                        <span class="actor-name">Vado</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Oruka</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Vado</span>
-                                    <p class="desc">Zelador do oráculo de Batanga, o portador de antigas sabedorias e
-                                        profecias sobre o futuro do reino.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/paxa-soliman.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Paxá Soliman</strong>
-                                        <span class="actor-name">Marco Ricca</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Paxá
-                                        Soliman</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Marco Ricca</span>
-                                    <p class="desc">Líder dos comerciantes turcos que assinam o acordo de exploração com
-                                        Batanga, gerando atritos com os planos de Jendal.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-teal">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/RodrigoSimas-Omar.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Omar</strong>
-                                        <span class="actor-name">Rodrigo Simas</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Omar</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Rodrigo
-                                        Simas</span>
-                                    <p class="desc">Filho do Paxá Soliman. Apaixona-se por Alika à primeira vista e não
-                                        hesita em ajudar e arriscar a vida para que ela escape no seu navio.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul class="character-grid" id="grid-batanga"></ul>
                 </div>
             </div>
         </section>
@@ -529,419 +281,7 @@
             <div class="container">
                 <div id="nucleo-barropreto" class="nucleo-section">
                     <h3 class="heading-md text-center mb-md" style="color: var(--gold-3);">Núcleo Barro Preto</h3>
-                    <ul class="character-grid">
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/tonho.webp" loading="lazy"
-                                        alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Tonho</strong>
-                                        <span class="actor-name">Ronald Sotto</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Tonho</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Ronald
-                                        Sotto</span>
-                                    <p class="desc">Jovem simplório e honesto de Barro Preto que sonha com um pedaço de
-                                        terra. Conhece Alika e se torna a sua grande e improvável paixão.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/dona-menina.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Dona Menina</strong>
-                                        <span class="actor-name">Zezé Motta</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Dona
-                                        Menina</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Zezé Motta</span>
-                                    <p class="desc">Matriarca sábia, conselheira de todos e detentora das memórias e
-                                        tradições de Barro Preto.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/mirinho-bonafe.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Mirinho Bonafé</strong>
-                                        <span class="actor-name">Nicolas Prattes</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Mirinho
-                                        Bonafé</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Nicolas
-                                        Prattes</span>
-                                    <p class="desc">Herdeiro do Engenho. Apesar da amizade de infância com Tonho, suas
-                                        armações e o investimento noentido em Alika causam enormes atritos.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/virginia.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Virgínia</strong>
-                                        <span class="actor-name">Theresa Fonseca</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Virgínia</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Theresa
-                                        Fonseca</span>
-                                    <p class="desc">Namorada possessiva de Mirinho que passa a conspirar ferozmente
-                                        contra a recém-chegada Alika/Lúcia motivada por ciúmes.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/josé.webp" loading="lazy"
-                                        alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">José / Zambi</strong>
-                                        <span class="actor-name">Bukassa Kabengele</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">José
-                                        / Zambi</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Bukassa
-                                        Kabengele</span>
-                                    <p class="desc">Irmão de Cayman II que abdicou do trono para viver no Brasil. Acolhe
-                                        Niara e Alika em sua residência e as ajuda na adaptação.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/teresa.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Teresa</strong>
-                                        <span class="actor-name">Ana Cecília Costa</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Teresa</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Ana Cecília
-                                        Costa</span>
-                                    <p class="desc">A bondosa esposa de Zambi/José. Será fundamental na acolhida da
-                                        realeza fugitiva e em seus disfarces perante os moradores da cidade.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Coronel José Casemiro Bonafé</strong>
-                                        <span class="actor-name">Cássio Gabus Mendes</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Coronel
-                                        José Casemiro Bonafé</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Cássio Gabus
-                                        Mendes</span>
-                                    <p class="desc">Poderoso coronel e dono do Engenho de cana e da cidade. Padrinho de
-                                        Tonho e pai do jovem ambicioso Mirinho.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/graca-bonafe.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Graça Bonafé</strong>
-                                        <span class="actor-name">Fabiana Karla</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Graça
-                                        Bonafé</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Fabiana
-                                        Karla</span>
-                                    <p class="desc">A imponente esposa do Coronel Bonafé. Adora ostentar superioridade
-                                        perante os moradores do Barro Preto.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Salma</strong>
-                                        <span class="actor-name">Rayssa Bratillieri</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Salma</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Rayssa
-                                        Bratillieri</span>
-                                    <p class="desc">Jovem moradora da cidade que se envolverá nas dinâmicas de poder e
-                                        amor da região de Barro Preto.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Manoel</strong>
-                                        <span class="actor-name">Daniel Rangel</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Manoel</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Daniel
-                                        Rangel</span>
-                                    <p class="desc">Homem da terra, trabalhador forte que conhece como ninguém os
-                                        caminhos da cidade.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Diógenes</strong>
-                                        <span class="actor-name">Danton Mello</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Diógenes</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Danton
-                                        Mello</span>
-                                    <p class="desc">Morador influente de Barro Preto, atuando muitas vezes entre os
-                                        poderes da igreja e dos Coronéis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder" style="background-color: #111;"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Marta</strong>
-                                        <span class="actor-name">Emanuelle Araújo</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Marta</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Emanuelle
-                                        Araújo</span>
-                                    <p class="desc">Uma mulher de fibra do Nordeste, guerreira e disposta a defender a
-                                        justiça para a sua família.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/caetana.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Caetana</strong>
-                                        <span class="actor-name">Cyria Coentro</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Caetana</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Cyria
-                                        Coentro</span>
-                                    <p class="desc">Mãe de Tonho. Mulher sofrida e batalhadora que trabalha de sol a sol
-                                        no engenho de cana.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Padre Viriato</strong>
-                                        <span class="actor-name">Marcelo Médici</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Padre
-                                        Viriato</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Marcelo
-                                        Médici</span>
-                                    <p class="desc">Pároco local, confessor de todos e que tenta manter a paz entre as
-                                        diversas correntes políticas de Barro Preto.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/prefeito-bartolomeu.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Prefeito Bartô</strong>
-                                        <span class="actor-name">Fábio Lago</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Prefeito
-                                        Bartô</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Fábio Lago</span>
-                                    <p class="desc">Prefeito caricato de Barro Preto (Bartolomeu), subjugado pelo poder
-                                        e riqueza dos Bonafé da região.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <div class="card-img-placeholder"></div>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Onildo</strong>
-                                        <span class="actor-name">Paulo Lessa</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Onildo</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Paulo Lessa</span>
-                                    <p class="desc">Fiel escudeiro no Engenho e um dos grandes apoios de Tonho em seus
-                                        planos para obter um pedaço de terra.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/mundica.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Mundica</strong>
-                                        <span class="actor-name">Samantha Jones</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Mundica</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Samantha
-                                        Jones</span>
-                                    <p class="desc">Menina espevitada que corre de um lado pro outro da fazenda
-                                        descobrindo os segredos e fofocas da realeza escondida.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front bg-gold">
-                                    <div class="card-frame card-frame-front"></div>
-                                    <img class="card-img-placeholder" src="assets/personagens/ana-maria-bonafe.webp"
-                                        loading="lazy" alt="Personagem" style="object-fit: cover;">
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">Ana Maria Bonafé</strong>
-                                        <span class="actor-name">Julia Lemos</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm"
-                                        style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">Ana
-                                        Maria Bonafé</strong>
-                                    <span class="actor-name-back mb-md"
-                                        style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">Julia Lemos</span>
-                                    <p class="desc">Filha mais nova da família. Observadora atenta das tramoias do irmão
-                                        Mirinho Bonafé na cidade de Barro Preto.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul class="character-grid" id="grid-barro-preto"></ul>
                 </div>
             </div>
         </section>
@@ -950,23 +290,167 @@
         <section id="realizadores" class="section pt-lg mb-lg mt-lg">
             <div class="container">
                 <div class="text-center section-header">
-                    <h2 class="heading-md clr-gold" style="text-transform: uppercase;">Palavras dos Realizadores</h2>
+                    <img src="assets/titulos/palavra-realizadores.webp" alt="Palavras dos Realizadores" loading="lazy"
+                        width="800" height="150"
+                        style="width: 100%; max-width: 800px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
                 </div>
-                <div class="quote-card glass-light"
-                    style="max-width: 800px; margin: 0 auto; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--beige-1); overflow: hidden;">
-                    <p style="font-size: 1.2rem; font-style: italic; color: var(--dark-1); margin-bottom: 1.5rem;">"A
-                        Nobreza do Amor é uma história que busca celebrar as raízes profundas que conectam o Brasil e a
-                        África. Foi um desafio imenso, mas também um orgulho enorme conceber um universo tão rico e com
-                        uma mensagem tão poderosa para as telas brasileiras."</p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div>
-                            <strong
-                                style="color: var(--orange-1); display: block; font-size: 1.1rem; text-transform: uppercase;">Gustavo
-                                Fernández</strong>
-                            <span style="color: var(--dark-2); font-size: 0.9rem;">Diretor Artístico</span>
+                <!-- CARROSSEL DE CITAÇÕES -->
+                <div class="quotes-carousel-wrapper" style="position: relative; max-width: 800px; margin: 0 auto;">
+
+                    <button class="carousel-btn prev-btn" aria-label="Citação anterior" onclick="moveQuoteCarousel(-1)"
+                        style="z-index: 10; background: none; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/setav2.webp" alt="Seta Esquerda" loading="lazy"
+                            style="width: 50px; height: auto; transform: scaleX(-1); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                    </button>
+
+                    <button class="carousel-btn next-btn" aria-label="Próxima citação" onclick="moveQuoteCarousel(1)"
+                        style="z-index: 10; background: none; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/setav2.webp" alt="Seta Direita" loading="lazy"
+                            style="width: 50px; height: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                    </button>
+
+                    <div class="quotes-carousel" style="overflow: hidden; width: 100%; border-radius: 16px;">
+                        <div class="quotes-track" id="quotesTrack"
+                            style="display: flex; width: 300%; transition: transform 0.5s ease-in-out;">
+
+                            <!-- Elísio Lopes Jr. -->
+                            <div class="quote-slide"
+                                style="flex: 0 0 33.333%; padding: 0 10px; box-sizing: border-box;">
+                                <div class="quote-card glass-light"
+                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--beige-1); background-image: url('assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
+                                    <div
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(245, 238, 226, 0.9); z-index: 1;">
+                                    </div>
+                                    <div style="position: relative; z-index: 2;">
+                                        <p
+                                            style="font-size: 1.2rem; font-style: italic; color: var(--dark-1); margin-bottom: 1.5rem;">
+                                            "A gente define A Nobreza do Amor uma fábula afro-brasileira. Ela tem essa
+                                            base no
+                                            diálogo e na troca entre Brasil e África. Vai chegar pelo coração e pelo
+                                            afeto às
+                                            pessoas."</p>
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div>
+                                                <strong
+                                                    style="color: var(--orange-1); display: block; font-size: 1.1rem; text-transform: uppercase;">Elísio
+                                                    Lopes Jr.</strong>
+                                                <span
+                                                    style="color: var(--dark-2); font-size: 0.9rem;">Escritores/Roteiristas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Duca Rachid -->
+                            <div class="quote-slide"
+                                style="flex: 0 0 33.333%; padding: 0 10px; box-sizing: border-box;">
+                                <div class="quote-card glass-light"
+                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--beige-1); background-image: url('assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
+                                    <div
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(245, 238, 226, 0.9); z-index: 1;">
+                                    </div>
+                                    <div style="position: relative; z-index: 2;">
+                                        <p
+                                            style="font-size: 1.2rem; font-style: italic; color: var(--dark-1); margin-bottom: 1.5rem;">
+                                            "É uma grande novidade ter uma nobreza africana em uma novela. É totalmente
+                                            inédito.
+                                            Faltava isso e era um desejo nosso mostrar."</p>
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div>
+                                                <strong
+                                                    style="color: var(--orange-1); display: block; font-size: 1.1rem; text-transform: uppercase;">Duca
+                                                    Rachid</strong>
+                                                <span
+                                                    style="color: var(--dark-2); font-size: 0.9rem;">Escritores/Roteiristas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Júlio Fischer -->
+                            <div class="quote-slide"
+                                style="flex: 0 0 33.333%; padding: 0 10px; box-sizing: border-box;">
+                                <div class="quote-card glass-light"
+                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--beige-1); background-image: url('assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
+                                    <div
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(245, 238, 226, 0.9); z-index: 1;">
+                                    </div>
+                                    <div style="position: relative; z-index: 2;">
+                                        <p
+                                            style="font-size: 1.2rem; font-style: italic; color: var(--dark-1); margin-bottom: 1.5rem;">
+                                            "A gente acredita profundamente nessa história e acreditamos que ela vai
+                                            sensibilizar
+                                            nosso público e cair no gosto."</p>
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div>
+                                                <strong
+                                                    style="color: var(--orange-1); display: block; font-size: 1.1rem; text-transform: uppercase;">Júlio
+                                                    Fischer</strong>
+                                                <span
+                                                    style="color: var(--dark-2); font-size: 0.9rem;">Escritores/Roteiristas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
+                    <!-- Bolinhas de Paginação -->
+                    <div class="quotes-dots" id="quotesDots"
+                        style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+                        <button class="dot active" onclick="jumpToQuote(0)" aria-label="Ir para slide 1"
+                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); cursor: pointer; transition: opacity 0.3s;"></button>
+                        <button class="dot" onclick="jumpToQuote(1)" aria-label="Ir para slide 2"
+                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); opacity: 0.4; cursor: pointer; transition: opacity 0.3s;"></button>
+                        <button class="dot" onclick="jumpToQuote(2)" aria-label="Ir para slide 3"
+                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); opacity: 0.4; cursor: pointer; transition: opacity 0.3s;"></button>
+                    </div>
+
                 </div>
+
+                <script>
+                    let currentQuoteIndex = 0;
+                    const totalQuotes = 3;
+
+                    function updateQuoteCarousel() {
+                        const track = document.getElementById('quotesTrack');
+                        const dots = document.querySelectorAll('#quotesDots .dot');
+
+                        // Move a trilha (track) para a esquerda (-33.333% por slide, pois a track tem 300% de largura)
+                        const percentage = -(currentQuoteIndex * 33.33333333);
+                        track.style.transform = `translateX(${percentage}%)`;
+
+                        // Atualiza as bolinhas (dots)
+                        dots.forEach((dot, index) => {
+                            if (index === currentQuoteIndex) {
+                                dot.style.opacity = '1';
+                                dot.classList.add('active');
+                            } else {
+                                dot.style.opacity = '0.4';
+                                dot.classList.remove('active');
+                            }
+                        });
+                    }
+
+                    function moveQuoteCarousel(direction) {
+                        currentQuoteIndex += direction;
+
+                        // Loop infinito
+                        if (currentQuoteIndex < 0) currentQuoteIndex = totalQuotes - 1;
+                        if (currentQuoteIndex >= totalQuotes) currentQuoteIndex = 0;
+
+                        updateQuoteCarousel();
+                    }
+
+                    function jumpToQuote(index) {
+                        currentQuoteIndex = index;
+                        updateQuoteCarousel();
+                    }
+                </script>
             </div>
         </section>
 
@@ -1011,7 +495,8 @@
         <!-- CURIOSIDADES -->
         <section id="curiosidades" class="section overflow-hidden mb-lg pt-lg">
             <div class="container text-center mb-md">
-                <h2 class="heading-lg clr-gold" style="text-transform: uppercase;">Curiosidades</h2>
+                <img src="assets/titulos/curiosidades.webp" alt="Curiosidades" loading="lazy" width="400" height="100"
+                    style="width: 100%; max-width: 400px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
                 <p style="color: var(--beige-1); opacity: 0.9; font-size: 1.1rem;">O que você precisa saber sobre a
                     superprodução.</p>
             </div>
@@ -1019,99 +504,117 @@
             <div class="container">
                 <div class="carousel-container" style="position: relative;">
                     <button class="carousel-btn prev-btn" aria-label="Previous">
-                        <img src="assets/setav2.webp" alt="Seta Esquerda"
+                        <img src="assets/setav2.webp" alt="Seta Esquerda" loading="lazy"
                             style="width: 60px; height: auto; transform: scaleX(-1);">
                     </button>
                     <div class="curiosities-grid" id="curiosities-carousel">
                         <div class="curiosity-card glass">
                             <span class="bg-number">01</span>
                             <h3>Curiosidade 1</h3>
-                            <p>Os trabalhos foram iniciados em dezembro, no Rio Grande do Norte, onde desembarcou um
-                                grupo
-                                de 150 pessoas e mais de 25 toneladas de equipamentos, para gravar em diferentes
+                            <p>Os trabalhos foram iniciados em <strong>dezembro</strong>, no <strong>Rio Grande do
+                                    Norte</strong>, onde desembarcou um grupo
+                                de <strong>150 pessoas</strong> e mais de <strong>25 toneladas de equipamentos</strong>,
+                                para gravar em diferentes
                                 paisagens,
-                                incluindo dunas, falésias, praias e parques. O local serviu tanto para Batanga quanto
-                                Barro
-                                Preto.</p>
+                                incluindo dunas, falésias, praias e parques. O local serviu tanto para
+                                <strong>Batanga</strong> quanto
+                                <strong>Barro Preto</strong>.
+                            </p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">02</span>
                             <h3>Curiosidade 2</h3>
-                            <p>A logística envolveu caminhões de figurino, de produção de arte, além de um camarim
-                                móvel, e
-                                equipamentos, como câmeras, drones e geradores.</p>
+                            <p>A logística envolveu <strong>caminhões de figurino</strong>, de produção de arte, além de
+                                um <strong>camarim móvel</strong>, e
+                                equipamentos, como <strong>câmeras, drones e geradores</strong>.</p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">03</span>
                             <h3>Curiosidade 3</h3>
-                            <p>Foram usados também cerca de seis veículos com estruturas desenvolvidas para garantir a
-                                estabilidade das câmeras em cenas de movimento em terreno arenoso.</p>
+                            <p>Foram usados também cerca de <strong>seis veículos</strong> com estruturas desenvolvidas
+                                para garantir a
+                                <strong>estabilidade das câmeras em cenas de movimento em terreno arenoso</strong>.
+                            </p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">04</span>
                             <h3>Curiosidade 4</h3>
-                            <p>A gerente de produção Andrea Kelly comentou sobre as gravações no Rio Grande do Norte,
-                                escolhido, entre outros aspectos, por uma questão geográfica: “A menor distância entre o
-                                Brasil e a África está nesse estado, em um ponto onde se costuma falar que o vento faz a
+                            <p>A gerente de produção <strong>Andrea Kelly</strong> comentou sobre as gravações no Rio
+                                Grande do Norte,
+                                escolhido, entre outros aspectos, por uma questão geográfica: “<strong>A menor distância
+                                    entre o
+                                    Brasil e a África está nesse estado</strong>, em um ponto onde se costuma falar que
+                                o vento faz a
                                 curva. Buscamos, então, locações que refletissem as muitas semelhanças entre os dois
-                                continentes. O resultado ficou lindo, e nos dá um orgulho imenso”, disse ela.</p>
+                                continentes. <strong>O resultado ficou lindo, e nos dá um orgulho imenso</strong>”,
+                                disse ela.</p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">05</span>
                             <h3>Curiosidade 5</h3>
-                            <p>Entre os cenários escolhidos para a novela, estão o Parque Nacional da Furna Feia, Dunas
-                                do
-                                Rosado, Maracajaú e Barreira do Inferno, com passagens pelas cidades de Areia Branca,
-                                Porto
-                                do Mangue, Guamaré, Macau, Maxaranguape, Mossoró, Parnamirim e Tibau do Sul, além da
-                                capital
-                                Natal.</p>
+                            <p>Entre os cenários escolhidos para a novela, estão o <strong>Parque Nacional da Furna
+                                    Feia</strong>, <strong>Dunas do
+                                    Rosado</strong>, Maracajaú e Barreira do Inferno, com passagens pelas cidades de
+                                Areia Branca,
+                                Porto do Mangue, Guamaré, Macau, Maxaranguape, <strong>Mossoró</strong>, Parnamirim e
+                                Tibau do Sul, além da
+                                capital <strong>Natal</strong>.</p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">06</span>
                             <h3>Curiosidade 6</h3>
-                            <p>Em janeiro, Niterói, no Rio de Janeiro, serviu como um “campo de batalha”, dando início à
-                                segunda fase das gravações. A equipe gravou na Fortaleza de Santa Cruz da Barra as cenas
+                            <p>Em <strong>janeiro</strong>, <strong>Niterói, no Rio de Janeiro</strong>, serviu como um
+                                “campo de batalha”, dando início à
+                                segunda fase das gravações. A equipe gravou na <strong>Fortaleza de Santa Cruz da
+                                    Barra</strong> as cenas
                                 em
-                                que ocorre a batalhas do dos africanos contra os colonizadores portugueses pela
-                                independência;</p>
+                                que ocorre a <strong>batalha dos africanos contra os colonizadores portugueses pela
+                                    independência</strong>;</p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">07</span>
                             <h3>Curiosidade 7</h3>
-                            <p>Além disso, no mesmo local, foram filmadas a coroação do rei Cayman (Welket Bungué) e da
-                                rainha Niara (Erika Januza), a apresentação da recém-nascida princesa Alika (Duda
-                                Santos)
-                                aos súditos, o golpe de Jendal (Lázaro Ramos).</p>
+                            <p>Além disso, no mesmo local, foram filmadas a <strong>coroação do rei Cayman (Welket
+                                    Bungué)</strong> e da
+                                <strong>rainha Niara (Erika Januza)</strong>, a apresentação da recém-nascida
+                                <strong>princesa Alika (Duda
+                                    Santos)</strong> aos súditos, <strong>o golpe de Jendal (Lázaro Ramos)</strong>.
+                            </p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">08</span>
                             <h3>Curiosidade 8</h3>
-                            <p>Outras locações no Rio de Janeiro, como pedreiras, fazendas e canaviais, também serão
-                                usadas
-                                para as gravações, envolvendo personagens tanto de Batanga quanto de Barro Preto.</p>
+                            <p>Outras locações no <strong>Rio de Janeiro</strong>, como pedreiras, fazendas e canaviais,
+                                também serão
+                                usadas para as gravações, envolvendo personagens tanto de <strong>Batanga</strong>
+                                quanto de <strong>Barro Preto</strong>.</p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">09</span>
                             <h3>Curiosidade 9</h3>
-                            <p>Batanga, segundo Gustavo Fernández, foi concebida com uma estética cheia de referências
-                                ao
-                                continente africano. “É a primeira vez que a TV Globo se aprofunda na representação da
-                                África dessa maneira, com uma narrativa inteira, rica em diversidade e pesquisa
-                                minuciosa.
-                                Cada detalhe, das roupas aos cenários, foi inspirado em referências reais, fruto de um
+                            <p>Batanga, segundo <strong>Gustavo Fernández</strong>, foi concebida com uma estética cheia
+                                de referências
+                                ao continente africano. “<strong>É a primeira vez que a TV Globo se aprofunda na
+                                    representação da
+                                    África dessa maneira</strong>, com uma narrativa inteira, rica em diversidade e
+                                pesquisa
+                                minuciosa. <strong>Cada detalhe, das roupas aos cenários, foi inspirado em referências
+                                    reais</strong>, fruto de um
                                 trabalho cuidadoso”, explica Fernández.</p>
                         </div>
                         <div class="curiosity-card glass">
                             <span class="bg-number">10</span>
                             <h3>Curiosidade 10</h3>
-                            <p>“Já Barro Preto, nossa cidade brasileira”, continua o diretor. “Tem um visual ainda mais
-                                fabular do que Batanga. Não é sertão, nem litoral, a cidade está situada em uma falésia,
-                                isolada, criando um microcosmo único”, contextualiza o diretor.</p>
+                            <p>“Já <strong>Barro Preto</strong>, nossa cidade brasileira”, continua o diretor.
+                                “<strong>Tem um visual ainda mais
+                                    fabular do que Batanga</strong>. Não é sertão, nem litoral, <strong>a cidade está
+                                    situada em uma falésia,
+                                    isolada, criando um microcosmo único</strong>”, contextualiza o diretor.</p>
                         </div>
                     </div>
                     <button class="carousel-btn next-btn" aria-label="Next">
-                        <img src="assets/setav2.webp" alt="Seta Direita" style="width: 60px; height: auto;">
+                        <img src="assets/setav2.webp" alt="Seta Direita" loading="lazy"
+                            style="width: 60px; height: auto;">
                     </button>
                 </div>
             </div>
@@ -1120,9 +623,8 @@
 
     <footer class="footer padding-md">
         <div class="container footer-content">
-            <div class="footer-divider"></div>
-
-            <h3 class="footer-section-title">CRÉDITOS OFICIAIS</h3>
+            <img src="assets/titulos/creditos.webp" alt="Créditos Oficiais" loading="lazy" width="400" height="100"
+                style="width: 100%; max-width: 400px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 4rem;">
 
             <div class="credits-grid">
                 <!-- Column 1 -->
@@ -1133,10 +635,14 @@
                         <p>Nome Sobrenome</p>
                     </div>
                     <div class="credit-block">
+                        <h4>COORDENAÇÃO DE DESIGN E DESENVOLVIMENTO</h4>
+                        <p>Guilherme Gomes</p>
+                    </div>
+                    <div class="credit-block">
                         <h4>DESIGN</h4>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
+                        <p>Gabs</p>
+                        <p>Gui Sousa</p>
+                        <p>Juan Silva</p>
                     </div>
                 </div>
 
@@ -1144,14 +650,12 @@
                 <div class="credits-col">
                     <div class="credit-block">
                         <h4>CONTEÚDO</h4>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
+                        <p>Maryna Monteiro</p>
                     </div>
                     <div class="credit-block">
                         <h4>DESENVOLVIMENTO</h4>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
+                        <p>Gabs</p>
+                        <p>Gui Sousa</p>
                     </div>
                 </div>
 
@@ -1160,6 +664,60 @@
     </footer>
 
     <script defer src="script.js"></script>
+
+    <!-- Carregar dados dos personagens -->
+    <script src="characters.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const renderCharacters = (nucleoId, containerId) => {
+                const container = document.getElementById(containerId);
+                if (!container || typeof charactersData === 'undefined') return;
+
+                const chars = charactersData.filter(c => c.nucleoId === nucleoId);
+
+                let html = '';
+                chars.forEach(char => {
+                    // Check if it's the placeholder without image
+                    let imgHtml = '';
+                    if (char.imgSrc) {
+                        imgHtml = `<img class="card-img-placeholder" src="${char.imgSrc}" loading="lazy" alt="Personagem" style="object-fit: cover;">`;
+                    } else {
+                        imgHtml = `<div class="card-img-placeholder" style="background-color: #111;"></div>`;
+                    }
+
+                    html += `
+                        <li class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front ${char.frontBgClass}">
+                                    <div class="card-frame card-frame-front"></div>
+                                    <div class="card-frame card-frame-front"></div>
+                                    ${imgHtml}
+                                    <div class="card-name-overlay">
+                                        <strong class="char-name">${char.frontCharName}</strong>
+                                        <span class="actor-name">${char.frontActorName}</span>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
+                                    <div class="card-frame card-frame-back"></div>
+                                    <strong class="char-name-back mb-sm" style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">
+                                        ${char.backCharName}
+                                    </strong>
+                                    <span class="actor-name-back mb-md" style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">
+                                        ${char.backActorName}
+                                    </span>
+                                    <p class="desc">${char.description}</p>
+                                </div>
+                            </div>
+                        </li>
+                    `;
+                });
+                container.innerHTML = html;
+            };
+
+            renderCharacters('batanga', 'grid-batanga');
+            renderCharacters('barropreto', 'grid-barro-preto');
+        });
+    </script>
 </body>
 
 </html>
