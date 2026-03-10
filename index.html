@@ -13,10 +13,8 @@
     <!-- Performance Preloads -->
     <!-- Logo e CSS críticos carregam primeiro -->
     <link rel="preload" href="assets/banner/logo.webp" as="image" fetchpriority="high">
-    <!-- Otimizações para Iframes do YouTube -->
-    <link rel="preconnect" href="https://www.youtube.com">
-    <link rel="preconnect" href="https://i.ytimg.com">
-    <link rel="preconnect" href="https://s.ytimg.com">
+    <!-- Otimizações para Videos -->
+    <script src="https://s3.glbimg.com/v1/AUTH_e1b09a2d222b4900a437a46914be81e5/api/stable/web/api.min.js"></script>
 </head>
 
 <body>
@@ -161,6 +159,8 @@
                 <div class="pane-img" id="img-batanga" style="flex: 1 1 50%;"></div>
 
                 <div class="batanga-videos-section bg-batanga" style="flex: 1 1 100%; padding: 4rem 2rem;">
+                    <h3 class="heading-md text-center" style="color: var(--gold-3); margin-bottom: 2rem;">Saiba mais
+                        sobre Batanga</h3>
                     <div class="video-carousel-container" style="max-width: 900px; margin: 0 auto; position: relative;">
                         <!-- Arrows -->
                         <button class="carousel-btn prev-video-btn" aria-label="Previous Video">
@@ -173,31 +173,17 @@
                             style="display: flex; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000;">
                             <div class="video-slide"
                                 style="flex: 0 0 100%; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%" loading="lazy"
-                                    src="https://www.youtube.com/embed/_Rg9GDfd4cI?enablejsapi=1" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <div class="globo-player" data-video-id="14377002"
+                                    style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                    <div style="color: white;">Carregando player...</div>
+                                </div>
                             </div>
                             <div class="video-slide"
                                 style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%" loading="lazy"
-                                    src="https://www.youtube.com/embed/QEs4cNRuXbw?enablejsapi=1" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                            <div class="video-slide"
-                                style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%" loading="lazy"
-                                    src="https://www.youtube.com/embed/2474fSZh9_w?enablejsapi=1" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                            <div class="video-slide"
-                                style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <iframe width="100%" height="100%" loading="lazy"
-                                    src="https://www.youtube.com/embed/peIZxZaQjfk?enablejsapi=1" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <div class="globo-player" data-video-id="14379340"
+                                    style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                    <div style="color: white;">Carregando player...</div>
+                                </div>
                             </div>
                         </div>
 
@@ -214,19 +200,15 @@
                                 style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--gold-3); cursor: pointer; transition: 0.3s; opacity: 1;"></span>
                             <span class="video-dot" data-index="1"
                                 style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
-                            <span class="video-dot" data-index="2"
-                                style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
-                            <span class="video-dot" data-index="3"
-                                style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="split-pane pane-barropreto" style="flex-wrap: wrap;">
-                <div class="pane-content bg-barropreto" style="flex: 1 1 50%;">
-                    <img src="assets/titulos/barro-preto.webp" alt="Barro Preto" loading="lazy" width="350" height="100"
-                        style="width: 100%; max-width: 350px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
+                <div class="pane-content bg-barropreto" style="flex: 1 1 60%;">
+                    <img src="assets/titulos/barro-preto.webp" alt="Barro Preto" loading="lazy" width="300" height="100"
+                        style="width: 100%; max-width: 300px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
                     <p>É na cidade fictícia de <strong>Barro Preto</strong> que os <strong>laços entre África e
                             Brasil</strong> se fortalecem ainda mais.
                         Preservando sua essência provinciana, mas cultivando ares cosmopolitas, o pequeno município do
@@ -242,15 +224,17 @@
                             (Theresa Fonseca)</strong>, possessa, levando-a a conspirar contra a recém-chegada.
                     </p>
                 </div>
-                <div class="pane-img" id="img-barropreto" style="flex: 1 1 50%;"></div>
+                <div class="pane-img" id="img-barropreto" style="flex: 1 1 40%;"></div>
 
                 <div class="barropreto-videos-section bg-barropreto" style="flex: 1 1 100%; padding: 4rem 2rem;">
+                    <h3 class="heading-md text-center" style="color: var(--gold-3); margin-bottom: 2rem;">Saiba mais
+                        sobre Barro Preto</h3>
                     <div class="video-container"
                         style="max-width: 900px; margin: 0 auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OJgFscvM97s"
-                            frameborder="0" loading="lazy"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <div class="globo-player" data-video-id="14409371"
+                            style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                            <div style="color: white;">Carregando player...</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -503,7 +487,7 @@
 
             <div class="container">
                 <div class="carousel-container" style="position: relative;">
-                    <button class="carousel-btn prev-btn" aria-label="Previous">
+                    <button class="carousel-btn prev-curiosity-btn" aria-label="Previous">
                         <img src="assets/setav2.webp" alt="Seta Esquerda" loading="lazy"
                             style="width: 60px; height: auto; transform: scaleX(-1);">
                     </button>
@@ -612,7 +596,7 @@
                                     isolada, criando um microcosmo único</strong>”, contextualiza o diretor.</p>
                         </div>
                     </div>
-                    <button class="carousel-btn next-btn" aria-label="Next">
+                    <button class="carousel-btn next-curiosity-btn" aria-label="Next">
                         <img src="assets/setav2.webp" alt="Seta Direita" loading="lazy"
                             style="width: 60px; height: auto;">
                     </button>
@@ -628,34 +612,37 @@
 
             <div class="credits-grid">
                 <!-- Column 1 -->
+                <!-- Column 1 -->
                 <div class="credits-col">
                     <div class="credit-block">
-                        <h4>COORDENAÇÃO DE CONTEÚDO</h4>
-                        <p>Nome Sobrenome</p>
-                        <p>Nome Sobrenome</p>
+                        <h4>COORDENADOR DE CONTEÚDO</h4>
+                        <p>Davi Padovani</p>
                     </div>
                     <div class="credit-block">
-                        <h4>COORDENAÇÃO DE DESIGN E DESENVOLVIMENTO</h4>
-                        <p>Guilherme Gomes</p>
+                        <h4>COORDENADOR DE PRODUTO</h4>
+                        <p>Guilherme Dutra</p>
                     </div>
                     <div class="credit-block">
-                        <h4>DESIGN</h4>
-                        <p>Gabs</p>
-                        <p>Gui Sousa</p>
-                        <p>Juan Silva</p>
+                        <h4>CONTEÚDO</h4>
+                        <p>Marcelo Ferreira</p>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
                 <div class="credits-col">
                     <div class="credit-block">
-                        <h4>CONTEÚDO</h4>
+                        <h4>COORDENAÇÃO DE DESIGN E DESENVOLVIMENTO</h4>
+                        <p>Guilherme Gomes</p>
+                    </div>
+                    <div class="credit-block">
+                        <h4>MARKETING DE PRODUTO</h4>
                         <p>Maryna Monteiro</p>
                     </div>
                     <div class="credit-block">
-                        <h4>DESENVOLVIMENTO</h4>
+                        <h4>DESIGN E DESENVOLVIMENTO</h4>
                         <p>Gabs</p>
                         <p>Gui Sousa</p>
+                        <p>Juan Silva</p>
                     </div>
                 </div>
 

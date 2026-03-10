@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
         curiositiesGrid.style.cursor = 'grab';
 
         // Listen for carousel buttons
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-curiosity-btn');
+        const nextBtn = document.querySelector('.next-curiosity-btn');
 
         if (prevBtn && nextBtn) {
             prevBtn.addEventListener('click', () => {
@@ -200,6 +200,80 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     initCountdown();
 
+    /* --- GloboPlayer Logic --- */
+    function initGloboPlayers() {
+        const players = document.querySelectorAll('.globo-player');
+        if (players.length === 0) return;
+
+        const initializePlayer = (container) => {
+            if (container.hasAttribute('data-player-initialized')) return;
+            const videoId = container.getAttribute('data-video-id');
+            if (!videoId) return;
+
+            container.setAttribute('data-player-initialized', 'true');
+            container.innerHTML = '';
+
+            const playerInstance = new window.WM.Player({
+                videosIDs: videoId,
+                width: "100%",
+                height: "100%",
+                autoPlay: true,
+                muted: true,
+                skipDFP: true,
+                loop: true,
+            });
+            playerInstance.attachTo(container);
+            container.wmPlayerInstance = playerInstance;
+
+            // Overlay para ligar o som ao primeiro clique (Tap to Unmute)
+            const overlay = document.createElement('div');
+            overlay.style.position = 'absolute';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.zIndex = '10';
+            overlay.style.cursor = 'pointer';
+
+            overlay.addEventListener('click', () => {
+                try { playerInstance.unmute(); } catch (e) { }
+                try { playerInstance.setVolume(1); } catch (e) { }
+                try { playerInstance.muted = false; } catch (e) { }
+                overlay.remove();
+            });
+
+            container.style.position = 'relative';
+            container.appendChild(overlay);
+        };
+
+        const setupObserver = () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    // Quando o threshold é atingido, inicializa e dá autoPlay
+                    if (entry.isIntersecting) {
+                        initializePlayer(entry.target);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            players.forEach(p => observer.observe(p));
+        };
+
+        const checkPlayerReady = () => {
+            if (typeof window.WM !== "undefined" && window.WM.playerAvailable) {
+                window.WM.playerAvailable.then(setupObserver);
+            } else if (typeof window.WM !== "undefined" && window.WM.Player) {
+                setupObserver();
+            } else {
+                setTimeout(checkPlayerReady, 100);
+            }
+        };
+
+        checkPlayerReady();
+    }
+    initGloboPlayers();
+
     /* --- Video Carousel Logic --- */
     const videoSlides = document.querySelectorAll('.video-slide');
     const videoDots = document.querySelectorAll('.video-dot');
@@ -209,12 +283,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateVideoCarousel(index) {
         // Stop current video from playing using postMessage API instead of reloading
-        videoSlides.forEach(slide => {
-            const iframe = slide.querySelector('iframe');
-            if (iframe) {
-                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        videoSlides.forEach((slide, i) => {
+            if (i !== index) {
+                // Suspende vídeo que não está ativo
+                const globoPlayer = slide.querySelector('.globo-player');
+                if (globoPlayer && globoPlayer.wmPlayerInstance) {
+                    try { globoPlayer.wmPlayerInstance.pause(); } catch (e) { }
+                }
+                const iframe = slide.querySelector('iframe');
+                if (iframe && iframe.contentWindow) {
+                    try { iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*'); } catch (e) { }
+                }
+                slide.style.display = 'none';
             }
-            slide.style.display = 'none';
         });
 
         videoDots.forEach(dot => {
@@ -223,7 +304,16 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.style.opacity = '0.5';
         });
 
-        videoSlides[index].style.display = 'flex';
+        const activeSlide = videoSlides[index];
+        activeSlide.style.display = 'flex';
+
+        // Se o player já tinha sido inicializado, forçamos o play novamente.
+        // Se ainda não foi inicializado, o IntersectionObserver vai capturar quando ficar display: flex.
+        const activeGloboPlayer = activeSlide.querySelector('.globo-player');
+        if (activeGloboPlayer && activeGloboPlayer.wmPlayerInstance) {
+            try { activeGloboPlayer.wmPlayerInstance.play(); } catch (e) { }
+        }
+
         videoDots[index].classList.add('active');
         videoDots[index].style.backgroundColor = 'var(--gold-3)';
         videoDots[index].style.opacity = '1';

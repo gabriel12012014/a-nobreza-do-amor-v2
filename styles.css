@@ -719,21 +719,25 @@ p {
     transform: translateY(-50%) scale(1.1);
 }
 
-.prev-btn {
+.prev-btn,
+.prev-curiosity-btn {
     left: -20px;
 }
 
-.next-btn {
+.next-btn,
+.next-curiosity-btn {
     right: -20px;
 }
 
 .prev-btn,
-.prev-video-btn {
+.prev-video-btn,
+.prev-curiosity-btn {
     padding-right: 4px;
 }
 
 .next-btn,
-.next-video-btn {
+.next-video-btn,
+.next-curiosity-btn {
     padding-left: 4px;
 }
 
@@ -1266,7 +1270,7 @@ p {
     box-sizing: border-box;
 }
 
-.carousel-btn {
+.quotes-carousel-wrapper .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1286,16 +1290,16 @@ p {
     transition: all 0.3s ease;
 }
 
-.carousel-btn:hover {
+.quotes-carousel-wrapper .carousel-btn:hover {
     background: var(--gold-2);
     transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-btn.prev-btn {
+.quotes-carousel-wrapper .carousel-btn.prev-btn {
     left: -20px;
 }
 
-.carousel-btn.next-btn {
+.quotes-carousel-wrapper .carousel-btn.next-btn {
     right: -20px;
 }
 
@@ -1328,17 +1332,17 @@ p {
 }
 
 @media (max-width: 768px) {
-    .carousel-btn {
+    .quotes-carousel-wrapper .carousel-btn {
         width: 32px;
         height: 32px;
         font-size: 1rem;
     }
 
-    .carousel-btn.prev-btn {
+    .quotes-carousel-wrapper .carousel-btn.prev-btn {
         left: 0px;
     }
 
-    .carousel-btn.next-btn {
+    .quotes-carousel-wrapper .carousel-btn.next-btn {
         right: 0px;
     }
 
