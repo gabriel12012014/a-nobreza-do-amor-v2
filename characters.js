@@ -1,7 +1,7 @@
 const charactersData = [
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/alika-lucia.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/alika-lucia.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Alika / Lúcia",
         "frontActorName": "Duda Santos",
@@ -11,7 +11,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/jendal.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/jendal.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Jendal",
         "frontActorName": "Lázaro Ramos",
@@ -21,7 +21,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/rainha-niara-cayman.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/rainha-niara-cayman.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Rainha Niara / Vera",
         "frontActorName": "Erika Januza",
@@ -31,7 +31,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/rei-jafari-cayman.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/rei-jafari-cayman.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Rei Cayman II",
         "frontActorName": "Welket Bunguê",
@@ -41,7 +41,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/chinua.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/chinua.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Chinua",
         "frontActorName": "Hilton Cobra",
@@ -51,7 +51,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/akin.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/akin.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Akin",
         "frontActorName": "André Luiz Miranda",
@@ -61,7 +61,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/ladisa.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/ladisa.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Ladisa",
         "frontActorName": "Rita Batista",
@@ -71,7 +71,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/kenia.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/kenia.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Kênia",
         "frontActorName": "Nikolly Fernandes",
@@ -81,7 +81,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/dumi.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/dumi.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Dumi",
         "frontActorName": "Licínio Januário",
@@ -91,7 +91,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/oruka.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/oruka.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Oruka",
         "frontActorName": "Vado",
@@ -101,7 +101,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/paxa-soliman.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/paxa-soliman.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Paxá Soliman",
         "frontActorName": "Marco Ricca",
@@ -111,7 +111,7 @@ const charactersData = [
     },
     {
         "nucleoId": "batanga",
-        "imgSrc": "assets/personagens/omar.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/omar.webp",
         "frontBgClass": "bg-teal",
         "frontCharName": "Omar",
         "frontActorName": "Rodrigo Simas",
@@ -123,7 +123,7 @@ const charactersData = [
 
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/tonho.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/tonho.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Tonho",
         "frontActorName": "Ronald Sotto",
@@ -133,7 +133,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/dona-menina.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/dona-menina.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Dona Menina",
         "frontActorName": "Zezé Motta",
@@ -143,7 +143,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/mirinho-bonafe.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/mirinho-bonafe.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Mirinho Bonafé",
         "frontActorName": "Nicolas Prattes",
@@ -153,7 +153,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/virginia.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/virginia.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Virgínia",
         "frontActorName": "Theresa Fonseca",
@@ -163,7 +163,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/josé.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/josé.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "José / Zambi",
         "frontActorName": "Bukassa Kabengele",
@@ -173,7 +173,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/teresa.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/teresa.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Teresa",
         "frontActorName": "Ana Cecília Costa",
@@ -183,7 +183,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/coronel-jose-camiro.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/coronel-jose-camiro.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Coronel José Casemiro Bonafé",
         "frontActorName": "Cássio Gabus Mendes",
@@ -193,7 +193,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/graca-bonafe.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/graca-bonafe.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Graça Bonafé",
         "frontActorName": "Fabiana Karla",
@@ -203,47 +203,47 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/salma.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Salma",
         "frontActorName": "Rayssa Bratillieri",
         "backCharName": "Salma",
         "backActorName": "Rayssa Bratillieri",
-        "description": "Jovem libanesa apaixonada inicialmente por Tonho."
+        "description": "Jovem libanesa apaixonada inicialmente por Tonho. Sua chegada a Barro Preto traz novos conflitos e perspectivas para a trama sertaneja."
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/manoel.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Manoel",
         "frontActorName": "Daniel Rangel",
         "backCharName": "Manoel",
         "backActorName": "Daniel Rangel",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "description": "Jovem idealista e batalhador de Barro Preto, Manoel busca seu lugar no mundo em meio às transformações da cidade."
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/diogenes.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Diógenes",
         "frontActorName": "Danton Mello",
         "backCharName": "Diógenes",
         "backActorName": "Danton Mello",
-        "description": "Banqueiro e homem mais rico da cidade. Controla financeiramente grande parte dos moradores."
+        "description": "Banqueiro e homem mais rico da cidade. Controla financeiramente grande parte dos moradores e exerce grande influência política."
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/marta.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Marta",
         "frontActorName": "Emanuelle Araújo",
         "backCharName": "Marta",
         "backActorName": "Emanuelle Araújo",
-        "description": "Esposa cosmopolita de Diógenes. Influencia costumes e moda na cidade, despertando admiração e inveja."
+        "description": "Esposa cosmopolita de Diógenes. Influencia costumes e moda na cidade, despertando admiração e inveja com seu estilo sofisticado."
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/caetana.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/caetana.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Caetana",
         "frontActorName": "Cyria Coentro",
@@ -253,17 +253,17 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/padre-viriato.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Padre Viriato",
         "frontActorName": "Marcelo Médici",
         "backCharName": "Padre Viriato",
         "backActorName": "Marcelo Médici",
-        "description": "Padre ranzinza que convive com os moradores da pensão e acaba envolvido em situações inusitadas da comunidade."
+        "description": "Padre ranzinza que convive com os moradores da pensão. Suas convicções são constantemente testadas pelas situações inusitadas da comunidade."
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/prefeito-bartolomeu.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/prefeito-bartolomeu.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Prefeito Bartô",
         "frontActorName": "Fábio Lago",
@@ -279,11 +279,11 @@ const charactersData = [
         "frontActorName": "Paulo Lessa",
         "backCharName": "Onildo",
         "backActorName": "Paulo Lessa",
-        "description": "Médico e escritor interessado na cultura africana. Se interessa por Vera/Niara."
+        "description": "Médico e escritor interessado na cultura africana. Sua curiosidade intelectual o aproxima de Vera/Niara em buscas fundamentais."
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/mundica.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/mundica.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Mundica",
         "frontActorName": "Samantha Jones",
@@ -293,7 +293,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "assets/personagens/ana-maria-bonafe.webp",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/ana-maria-bonafe.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Ana Maria Bonafé",
         "frontActorName": "Julia Lemos",

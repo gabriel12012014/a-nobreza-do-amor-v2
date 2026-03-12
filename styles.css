@@ -131,6 +131,7 @@ h4,
     font-family: 'forevs', sans-serif;
     font-weight: 700;
     line-height: 1.2;
+    text-transform: uppercase !important;
 }
 
 p {
@@ -286,6 +287,7 @@ p {
     color: var(--dark-1);
     font-weight: 700;
     letter-spacing: 1px;
+    text-transform: uppercase !important;
 }
 
 .nav-links {
@@ -445,6 +447,7 @@ p {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0.5rem;
+    text-transform: uppercase !important;
 }
 
 .countdown-label {
@@ -575,6 +578,13 @@ p {
 
 .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
+}
+
+/* Hover flip no Desktop */
+@media (min-width: 1024px) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 .flip-card-front,
@@ -762,7 +772,7 @@ p {
     min-width: 300px;
     max-width: 350px;
     flex: 0 0 auto;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 .curiosity-card .bg-number {
@@ -796,6 +806,7 @@ p {
     font-weight: 700;
     margin-bottom: 0.8rem;
     color: var(--gold-3);
+    text-transform: uppercase !important;
 }
 
 .curiosity-card p {
@@ -959,6 +970,17 @@ p {
         flex-direction: column;
     }
 
+    .batanga-videos-section,
+    .barropreto-videos-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .video-carousel-track,
+    .video-container {
+        border-radius: 0 !important;
+    }
+
     .pane-img {
         min-height: 400px;
         width: 100%;
@@ -1069,10 +1091,30 @@ p {
     }
 
     /* Curiosities Cards Mobile Adjustments */
+    .curiosities-grid {
+        padding-left: 40px;
+        padding-right: 40px;
+        scroll-padding-left: 40px;
+        scroll-padding-right: 40px;
+        justify-content: flex-start;
+    }
+
+    .prev-curiosity-btn {
+        left: 0 !important;
+    }
+
+    .next-curiosity-btn {
+        right: 0 !important;
+    }
+
     .curiosity-card {
         min-width: 260px;
         max-width: 280px;
         padding: 2rem 1.25rem;
+    }
+
+    .carousel-btn img {
+        width: 40px !important;
     }
 
     /* Hero Subtitle */
@@ -1102,6 +1144,24 @@ p {
     .main-logo {
         max-width: 100% !important;
         width: 100% !important;
+    }
+
+    img[src*="assets/titulos/"] {
+        max-width: 90vw !important;
+        width: auto !important;
+    }
+
+    img[src*="reino-batanga.webp"],
+    img[src*="barro-preto.webp"] {
+        max-width: 60vw !important;
+    }
+
+    img[src*="curiosidades.webp"] {
+        max-width: 300px !important;
+    }
+
+    img[src*="creditos.webp"] {
+        max-width: 60vw !important;
     }
 
     /* Container global width adjustments for mobile */
@@ -1200,48 +1260,7 @@ p {
     }
 }
 
-/* Poll Section */
-.poll-option {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    text-align: left;
-    transition: var(--transition);
-    color: white;
-    font-size: 1.2rem;
-    font-family: "Globotipo", sans-serif;
-}
 
-#btn-trono {
-    background-color: var(--teal-2);
-}
-
-#btn-amor {
-    background-color: var(--red-2);
-}
-
-.poll-option:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-}
-
-.poll-option:disabled {
-    cursor: default;
-    transform: none;
-    filter: none;
-}
-
-.poll-text {
-    position: relative;
-    z-index: 2;
-    font-weight: 600;
-}
 
 /* ====== CAROUSEL DE CITAÇÕES ====== */
 .quotes-carousel-wrapper {
