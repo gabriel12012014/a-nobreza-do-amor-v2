@@ -37,7 +37,7 @@ const charactersData = [
         "frontActorName": "Welket Bunguê",
         "backCharName": "Rei Cayman II",
         "backActorName": "Welket Bunguê",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "description": "Pai de Alika e marido de Niara, Cayman II assume o trono de Batanga após a Guerra de Independência. Deposto por um golpe de Jendal, morre ao tentar fugir com a família real."
     },
     {
         "nucleoId": "batanga",
@@ -273,7 +273,7 @@ const charactersData = [
     },
     {
         "nucleoId": "barropreto",
-        "imgSrc": "",
+        "imgSrc": "https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/personagens/onildo.webp",
         "frontBgClass": "bg-gold",
         "frontCharName": "Onildo",
         "frontActorName": "Paulo Lessa",

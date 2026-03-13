@@ -555,6 +555,7 @@ p {
     gap: 1.5rem;
     list-style: none;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
     /* Essential for the 3D effect */
 }
 
@@ -563,6 +564,9 @@ p {
     aspect-ratio: 1 / 1;
     height: auto;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .flip-card-inner {
@@ -572,18 +576,29 @@ p {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateZ(0);
+    -webkit-transform: rotateY(180deg) translateZ(0);
 }
 
 /* Hover flip no Desktop */
 @media (min-width: 1024px) {
     .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
+        transform: rotateY(180deg) translateZ(0);
+        -webkit-transform: rotateY(180deg) translateZ(0);
+    }
+
+    .flip-card:hover .card-name-overlay,
+    .flip-card:hover .tap-hint {
+        opacity: 0;
     }
 }
 
@@ -595,25 +610,41 @@ p {
     -webkit-backface-visibility: hidden;
     /* Safari */
     backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     border-radius: 15px;
     overflow: hidden;
+    will-change: transform;
+}
+
+/* Safari: força o backface em elementos internos para evitar texto espelhado */
+.flip-card-front *,
+.flip-card-back * {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .flip-card-front {
     background-color: transparent;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     display: block;
+    transform: rotateY(0deg) translateZ(1px);
+    -webkit-transform: rotateY(0deg) translateZ(1px);
     /* Removing flex centering to allow absolute positioning of children */
 }
 
 .flip-card-back {
-    padding: 3rem 4rem;
+    background-color: var(--dark-1);
+    color: white;
+    transform: rotateY(180deg) translateZ(1px);
+    -webkit-transform: rotateY(180deg) translateZ(1px);
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: transparent;
+    padding: 2.5rem;
 }
 
 /* Removed empty rulesets */
@@ -638,17 +669,28 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 2rem 1rem 1.5rem 1rem;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
     z-index: 2;
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: opacity 0.2s ease;
+}
+
+.tap-hint {
+    transition: opacity 0.2s ease;
+}
+
+.flip-card.flipped .card-name-overlay,
+.flip-card.flipped .tap-hint {
+    opacity: 0;
 }
 
 .flip-card-front strong {
     display: block;
     font-size: 1.4rem;
+    line-height: 1;
     color: #FFFFFF;
     font-family: 'forevs', sans-serif;
     text-transform: uppercase;
@@ -660,7 +702,7 @@ p {
 
 .flip-card-front span {
     display: block;
-    margin-top: 0.2rem;
+    margin-top: 0;
     font-size: 1.2rem;
     color: var(--gold-3);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9), 0px 0px 2px rgba(0, 0, 0, 0.8);
@@ -668,22 +710,20 @@ p {
     z-index: 2;
 }
 
-.flip-card-back {
-    background-color: var(--dark-1);
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2.5rem;
+.flip-card-back .char-name-back {
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+}
+
+.flip-card-back .actor-name-back {
+    line-height: 1;
 }
 
 .flip-card-back .desc {
     color: var(--beige-3);
     font-size: 1.05rem;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 /* Curiosities Carousel Layout */
@@ -1064,8 +1104,16 @@ p {
     z-index: 20;
 }
 
+.mobile-title-break {
+    display: none;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 600px) {
+    .mobile-title-break {
+        display: block;
+    }
+
 
     /* Countdown */
     .countdown-container {
