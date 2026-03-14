@@ -8,21 +8,19 @@
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ris3btc.css">
     <!-- Local CSS -->
-    <link rel="stylesheet" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/styles.css">
+    <link rel="stylesheet" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/styles.css?v=20260314">
 
     <!-- Performance Preloads -->
     <!-- Logo e CSS críticos carregam primeiro -->
     <link rel="preload" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/banner/logo.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/moldura-foto-1x1.webp" as="image">
-    <link rel="preload" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/moldura-foto-1x1-verso.webp" as="image">
-    <!-- Otimizações para Videos -->
-    <script defer src="https://s3.glbimg.com/v1/AUTH_e1b09a2d222b4900a437a46914be81e5/api/stable/web/api.min.js"></script>
+    <link rel="preload" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/banner/load-banner.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/banner/ANDA_LOGO_BG.webp" as="image" fetchpriority="high">
 </head>
 
 <body>
 
-    <header class="hero" id="hero-section" style="background-image: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/banner/load-banner.webp'); background-size: cover; background-position: center;">
-        <video muted playsinline preload="metadata" class="hero-video" id="hero-video" style="opacity: 0;">
+    <header class="hero" id="hero-section">
+        <video muted playsinline preload="metadata" poster="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/banner/load-banner.webp" class="hero-video" id="hero-video">
             <source data-src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/banner/banner-video-v2.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -42,37 +40,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Countdown Section -->
-    <section class="section text-center padding-md"
-        style="display: none; min-height: 80vh; flex-direction: column; align-items: center; justify-content: center; overflow-x: hidden; position: relative; background-image: linear-gradient(#000, #000), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/fundoAreia.webp'); background-size: cover; background-position: center; background-blend-mode: color, normal, multiply, normal;">
-        <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 20px; background: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/barra.webp') repeat-x center; background-size: auto 100%;">
-        </div>
-        <img src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/titulos/estreia-em.webp" alt="Estreia em" class="estreia-img" width="380" height="90"
-            style="width: 100%; max-width: 380px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
-        <div id="countdown" class="countdown-container">
-            <div class="countdown-item">
-                <span id="days" class="countdown-value">00</span>
-                <span class="countdown-label">Dias</span>
-            </div>
-            <div class="countdown-item">
-                <span id="hours" class="countdown-value">00</span>
-                <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes" class="countdown-value">00</span>
-                <span class="countdown-label">Min</span>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds" class="countdown-value">00</span>
-                <span class="countdown-label">Seg</span>
-            </div>
-        </div>
-        <div
-            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 20px; background: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/barra.webp') repeat-x center; background-size: auto 100%;">
-        </div>
-    </section>
 
     <main>
         <!-- SINOPSE CURTA -->
@@ -170,20 +137,15 @@
                         </button>
 
                         <!-- Videos Container -->
-                        <div class="video-carousel-track"
-                            style="display: flex; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000;">
-                            <div class="video-slide"
-                                style="flex: 0 0 100%; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                                <div class="globo-player" data-video-id="14377002"
-                                    style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                                    <div style="color: white;">Carregando player...</div>
+                        <div class="video-carousel-track">
+                            <div class="video-slide">
+                                <div class="globo-player" data-video-id="14377002">
+                                    <div class="player-loading">Carregando player...</div>
                                 </div>
                             </div>
-                            <div class="video-slide"
-                                style="flex: 0 0 100%; width: 100%; height: 100%; display: none; justify-content: center; align-items: center;">
-                                <div class="globo-player" data-video-id="14379340"
-                                    style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                                    <div style="color: white;">Carregando player...</div>
+                            <div class="video-slide video-slide-hidden">
+                                <div class="globo-player" data-video-id="14379340">
+                                    <div class="player-loading">Carregando player...</div>
                                 </div>
                             </div>
                         </div>
@@ -195,12 +157,9 @@
                         </button>
 
                         <!-- Dots indicator -->
-                        <div class="video-dots"
-                            style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
-                            <span class="video-dot active" data-index="0"
-                                style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--gold-3); cursor: pointer; transition: 0.3s; opacity: 1;"></span>
-                            <span class="video-dot" data-index="1"
-                                style="width: 12px; height: 12px; border-radius: 50%; background-color: white; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
+                        <div class="video-dots">
+                            <button class="video-dot active" data-index="0" type="button" aria-label="Abrir vídeo 1"></button>
+                            <button class="video-dot" data-index="1" type="button" aria-label="Abrir vídeo 2"></button>
                         </div>
                     </div>
                 </div>
@@ -229,11 +188,9 @@
 
                 <div class="barropreto-videos-section bg-barropreto" style="flex: 1 1 100%; padding: 4rem 2rem;">
                     <h3 class="heading-md text-center" style="color: var(--gold-3); margin-bottom: 2rem;">Saiba mais sobre<br class="mobile-title-break"> Barro Preto</h3>
-                    <div class="video-container"
-                        style="max-width: 900px; margin: 0 auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                        <div class="globo-player" data-video-id="14409371"
-                            style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                            <div style="color: white;">Carregando player...</div>
+                    <div class="video-container">
+                        <div class="globo-player" data-video-id="14409371">
+                            <div class="player-loading">Carregando player...</div>
                         </div>
                     </div>
                 </div>
@@ -279,47 +236,36 @@
                         style="width: 100%; max-width: 500px; height: auto; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)); margin-bottom: 2rem;">
                 </div>
                 <!-- CARROSSEL DE CITAÇÕES -->
-                <div class="quotes-carousel-wrapper" style="position: relative; max-width: 800px; margin: 0 auto;">
+                <div class="quotes-carousel-wrapper">
 
-                    <button class="carousel-btn prev-btn" aria-label="Citação anterior" onclick="moveQuoteCarousel(-1)"
-                        style="z-index: 10; background: none; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <button class="carousel-btn prev-btn" type="button" aria-label="Citação anterior" data-quote-direction="-1">
                         <img src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/setav2.webp" alt="Seta Esquerda" loading="lazy"
                             style="width: 50px; height: auto; transform: scaleX(-1); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                     </button>
 
-                    <button class="carousel-btn next-btn" aria-label="Próxima citação" onclick="moveQuoteCarousel(1)"
-                        style="z-index: 10; background: none; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <button class="carousel-btn next-btn" type="button" aria-label="Próxima citação" data-quote-direction="1">
                         <img src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/setav2.webp" alt="Seta Direita" loading="lazy"
                             style="width: 50px; height: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                     </button>
 
-                    <div class="quotes-carousel" style="overflow: hidden; width: 100%; border-radius: 16px;">
-                        <div class="quotes-track" id="quotesTrack"
-                            style="display: flex; width: 400%; transition: transform 0.5s ease-in-out;">
+                    <div class="quotes-carousel">
+                        <div class="quotes-track" id="quotesTrack">
 
                             <!-- Elísio Lopes Jr. -->
-                            <div class="quote-slide"
-                                style="flex: 0 0 25%; padding: 0 10px; box-sizing: border-box;">
-                                <div class="quote-card glass-light"
-                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--dark-1); background-image: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
-                                    <div
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.72); z-index: 1;">
-                                    </div>
-                                    <div style="position: relative; z-index: 2;">
-                                        <p
-                                            style="font-size: 1.2rem; font-style: italic; color: var(--beige-1); margin-bottom: 1.5rem;">
+                            <div class="quote-slide">
+                                <div class="quote-card glass-light">
+                                    <div class="quote-card-overlay"></div>
+                                    <div class="quote-card-content">
+                                        <p class="quote-text">
                                             "A gente define A Nobreza do Amor uma fábula afro-brasileira. Ela tem essa
                                             base no
                                             diálogo e na troca entre Brasil e África. Vai chegar pelo coração e pelo
                                             afeto às
                                             pessoas."</p>
-                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <div class="quote-meta">
                                             <div>
-                                                <strong
-                                                    style="color: var(--gold-3); display: block; font-size: 1.1rem; text-transform: uppercase;">Elísio
-                                                    Lopes Jr.</strong>
-                                                <span
-                                                    style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Autor</span>
+                                                <strong class="quote-author">Elísio Lopes Jr.</strong>
+                                                <span class="quote-role">Autor</span>
                                             </div>
                                         </div>
                                     </div>
@@ -327,26 +273,18 @@
                             </div>
 
                             <!-- Duca Rachid -->
-                            <div class="quote-slide"
-                                style="flex: 0 0 25%; padding: 0 10px; box-sizing: border-box;">
-                                <div class="quote-card glass-light"
-                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--dark-1); background-image: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
-                                    <div
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.72); z-index: 1;">
-                                    </div>
-                                    <div style="position: relative; z-index: 2;">
-                                        <p
-                                            style="font-size: 1.2rem; font-style: italic; color: var(--beige-1); margin-bottom: 1.5rem;">
+                            <div class="quote-slide">
+                                <div class="quote-card glass-light">
+                                    <div class="quote-card-overlay"></div>
+                                    <div class="quote-card-content">
+                                        <p class="quote-text">
                                             "É uma grande novidade ter uma nobreza africana em uma novela. É totalmente
                                             inédito.
                                             Faltava isso e era um desejo nosso mostrar."</p>
-                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <div class="quote-meta">
                                             <div>
-                                                <strong
-                                                    style="color: var(--gold-3); display: block; font-size: 1.1rem; text-transform: uppercase;">Duca
-                                                    Rachid</strong>
-                                                <span
-                                                    style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Autora</span>
+                                                <strong class="quote-author">Duca Rachid</strong>
+                                                <span class="quote-role">Autora</span>
                                             </div>
                                         </div>
                                     </div>
@@ -354,26 +292,18 @@
                             </div>
 
                             <!-- Júlio Fischer -->
-                            <div class="quote-slide"
-                                style="flex: 0 0 25%; padding: 0 10px; box-sizing: border-box;">
-                                <div class="quote-card glass-light"
-                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--dark-1); background-image: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
-                                    <div
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.72); z-index: 1;">
-                                    </div>
-                                    <div style="position: relative; z-index: 2;">
-                                        <p
-                                            style="font-size: 1.2rem; font-style: italic; color: var(--beige-1); margin-bottom: 1.5rem;">
+                            <div class="quote-slide">
+                                <div class="quote-card glass-light">
+                                    <div class="quote-card-overlay"></div>
+                                    <div class="quote-card-content">
+                                        <p class="quote-text">
                                             "A gente acredita profundamente nessa história e acreditamos que ela vai
                                             sensibilizar
                                             nosso público e cair no gosto."</p>
-                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <div class="quote-meta">
                                             <div>
-                                                <strong
-                                                    style="color: var(--gold-3); display: block; font-size: 1.1rem; text-transform: uppercase;">Júlio
-                                                    Fischer</strong>
-                                                <span
-                                                    style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Autor</span>
+                                                <strong class="quote-author">Júlio Fischer</strong>
+                                                <span class="quote-role">Autor</span>
                                             </div>
                                         </div>
                                     </div>
@@ -381,23 +311,16 @@
                             </div>
 
                             <!-- Gustavo Fernández -->
-                            <div class="quote-slide"
-                                style="flex: 0 0 25%; padding: 0 10px; box-sizing: border-box;">
-                                <div class="quote-card glass-light"
-                                    style="width: 100%; padding: 2rem; border-radius: 16px; text-align: left; background-color: var(--dark-1); background-image: url('https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/assets/bg-nucleo-b.webp'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
-                                    <div
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.72); z-index: 1;">
-                                    </div>
-                                    <div style="position: relative; z-index: 2;">
-                                        <p
-                                            style="font-size: 1.2rem; font-style: italic; color: var(--beige-1); margin-bottom: 1.5rem;">
+                            <div class="quote-slide">
+                                <div class="quote-card glass-light">
+                                    <div class="quote-card-overlay"></div>
+                                    <div class="quote-card-content">
+                                        <p class="quote-text">
                                             "Temos uma produção 'fora da curva' em todos os sentidos, diferente do tradicional da novela que vemos nessa faixa de horário."</p>
-                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <div class="quote-meta">
                                             <div>
-                                                <strong
-                                                    style="color: var(--gold-3); display: block; font-size: 1.1rem; text-transform: uppercase;">Gustavo Fernández</strong>
-                                                <span
-                                                    style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Diretor Artístico</span>
+                                                <strong class="quote-author">Gustavo Fernández</strong>
+                                                <span class="quote-role">Diretor Artístico</span>
                                             </div>
                                         </div>
                                     </div>
@@ -408,59 +331,14 @@
                     </div>
 
                     <!-- Bolinhas de Paginação -->
-                    <div class="quotes-dots" id="quotesDots"
-                        style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
-                        <button class="dot active" onclick="jumpToQuote(0)" aria-label="Ir para slide 1"
-                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); cursor: pointer; transition: opacity 0.3s;"></button>
-                        <button class="dot" onclick="jumpToQuote(1)" aria-label="Ir para slide 2"
-                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); opacity: 0.4; cursor: pointer; transition: opacity 0.3s;"></button>
-                        <button class="dot" onclick="jumpToQuote(2)" aria-label="Ir para slide 3"
-                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); opacity: 0.4; cursor: pointer; transition: opacity 0.3s;"></button>
-                        <button class="dot" onclick="jumpToQuote(3)" aria-label="Ir para slide 4"
-                            style="width: 12px; height: 12px; border-radius: 50%; border: none; background-color: var(--gold-1); opacity: 0.4; cursor: pointer; transition: opacity 0.3s;"></button>
+                    <div class="quotes-dots" id="quotesDots">
+                        <button class="dot active" type="button" data-quote-index="0" aria-label="Ir para slide 1"></button>
+                        <button class="dot" type="button" data-quote-index="1" aria-label="Ir para slide 2"></button>
+                        <button class="dot" type="button" data-quote-index="2" aria-label="Ir para slide 3"></button>
+                        <button class="dot" type="button" data-quote-index="3" aria-label="Ir para slide 4"></button>
                     </div>
 
                 </div>
-
-                <script>
-                    let currentQuoteIndex = 0;
-                    const totalQuotes = 4;
-
-                    function updateQuoteCarousel() {
-                        const track = document.getElementById('quotesTrack');
-                        const dots = document.querySelectorAll('#quotesDots .dot');
-
-                        // Move a trilha (track) para a esquerda (-25% por slide, pois a track tem 400% de largura)
-                        const percentage = -(currentQuoteIndex * 25);
-                        track.style.transform = `translateX(${percentage}%)`;
-
-                        // Atualiza as bolinhas (dots)
-                        dots.forEach((dot, index) => {
-                            if (index === currentQuoteIndex) {
-                                dot.style.opacity = '1';
-                                dot.classList.add('active');
-                            } else {
-                                dot.style.opacity = '0.4';
-                                dot.classList.remove('active');
-                            }
-                        });
-                    }
-
-                    function moveQuoteCarousel(direction) {
-                        currentQuoteIndex += direction;
-
-                        // Loop infinito
-                        if (currentQuoteIndex < 0) currentQuoteIndex = totalQuotes - 1;
-                        if (currentQuoteIndex >= totalQuotes) currentQuoteIndex = 0;
-
-                        updateQuoteCarousel();
-                    }
-
-                    function jumpToQuote(index) {
-                        currentQuoteIndex = index;
-                        updateQuoteCarousel();
-                    }
-                </script>
             </div>
         </section>
 
@@ -630,66 +508,8 @@
         </div>
     </footer>
 
-    <script defer src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/script.js"></script>
-
-    <!-- Carregar dados dos personagens -->
-    <script src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/characters.js?v=20260313"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const renderCharacters = (nucleoId, containerId) => {
-                const container = document.getElementById(containerId);
-                if (!container || typeof charactersData === 'undefined') return;
-
-                const chars = charactersData.filter(c => c.nucleoId === nucleoId);
-
-                let html = '';
-                chars.forEach(char => {
-                    // Check if it's the placeholder without image
-                    let imgHtml = '';
-                    if (char.imgSrc) {
-                        imgHtml = `<img class="card-img-placeholder" src="${char.imgSrc}" loading="lazy" alt="Personagem" style="object-fit: cover;">`;
-                    } else {
-                        imgHtml = `<div class="card-img-placeholder" style="background-color: #111;"></div>`;
-                    }
-
-                    html += `
-                        <li class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front ${char.frontBgClass}">
-                                    <div class="card-frame card-frame-front"></div>
-                                    ${imgHtml}
-                                    <span class="tap-hint" style="position: absolute; top: 15px; right: 15px; color: white; background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.5); z-index: 20;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                            <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                            <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
-                                        </svg>
-                                    </span>
-                                    <div class="card-name-overlay">
-                                        <strong class="char-name">${char.frontCharName}</strong>
-                                        <span class="actor-name">${char.frontActorName}</span>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back bg-dark" style="background-color: transparent !important;">
-                                    <div class="card-frame card-frame-back"></div>
-                                    <strong class="char-name-back mb-sm" style="color: var(--gold-3); font-family: 'forevs', sans-serif; font-size: 1.6rem; text-transform: uppercase;">
-                                        ${char.backCharName}
-                                    </strong>
-                                    <span class="actor-name-back mb-md" style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">
-                                        ${char.backActorName}
-                                    </span>
-                                    <p class="desc">${char.description}</p>
-                                </div>
-                            </div>
-                        </li>
-                    `;
-                });
-                container.innerHTML = html;
-            };
-
-            renderCharacters('batanga', 'grid-batanga');
-            renderCharacters('barropreto', 'grid-barro-preto');
-        });
-    </script>
+    <script defer src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/characters.js?v=20260313"></script>
+    <script defer src="https://s3.glbimg.com/v1/AUTH_e03f7a1106bb438e970511f892f07c35/gshow/2026/a-nobreza-do-amor/script.js?v=20260314"></script>
 </body>
 
 </html>
