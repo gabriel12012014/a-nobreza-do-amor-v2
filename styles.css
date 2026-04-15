@@ -1131,13 +1131,6 @@ p {
     color: white;
 }
 
-.player-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 10;
-    cursor: pointer;
-}
-
 .video-dots {
     display: flex;
     justify-content: center;

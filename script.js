@@ -2,6 +2,14 @@ const GLOBO_PLAYER_API_URL = "https://s3.glbimg.com/v1/AUTH_e1b09a2d222b4900a437
 
 let globoPlayerApiPromise;
 
+function muteGloboPlayerInstance(playerInstance) {
+    if (!playerInstance) return;
+
+    try { playerInstance.mute(); } catch (error) { }
+    try { playerInstance.setVolume(0); } catch (error) { }
+    try { playerInstance.muted = true; } catch (error) { }
+}
+
 function loadGloboPlayerApi() {
     if (typeof window.WM !== "undefined" && window.WM.Player) {
         return Promise.resolve(window.WM);
@@ -283,17 +291,10 @@ function initGloboPlayers() {
 
         playerInstance.attachTo(container);
         container.wmPlayerInstance = playerInstance;
+        muteGloboPlayerInstance(playerInstance);
 
-        const overlay = document.createElement("div");
-        overlay.className = "player-overlay";
-        overlay.addEventListener("click", () => {
-            try { playerInstance.unmute(); } catch (error) { }
-            try { playerInstance.setVolume(1); } catch (error) { }
-            try { playerInstance.muted = false; } catch (error) { }
-            overlay.remove();
-        });
-
-        container.appendChild(overlay);
+        window.setTimeout(() => muteGloboPlayerInstance(playerInstance), 150);
+        window.setTimeout(() => muteGloboPlayerInstance(playerInstance), 600);
     };
 
     const playerObserver = new IntersectionObserver((entries, observer) => {
@@ -339,6 +340,7 @@ function initVideoCarousel() {
             if (!isActive) {
                 const globoPlayer = slide.querySelector(".globo-player");
                 if (globoPlayer && globoPlayer.wmPlayerInstance) {
+                    muteGloboPlayerInstance(globoPlayer.wmPlayerInstance);
                     try { globoPlayer.wmPlayerInstance.pause(); } catch (error) { }
                 }
 
@@ -359,6 +361,7 @@ function initVideoCarousel() {
 
         const activeGloboPlayer = activeSlide.querySelector(".globo-player");
         if (activeGloboPlayer && activeGloboPlayer.wmPlayerInstance) {
+            muteGloboPlayerInstance(activeGloboPlayer.wmPlayerInstance);
             try { activeGloboPlayer.wmPlayerInstance.play(); } catch (error) { }
         }
     };
